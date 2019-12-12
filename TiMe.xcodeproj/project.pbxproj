@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95923A2C3D100EB987E /* AppDelegate.swift */; };
+		EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */; };
+		EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* ViewController.swift */; };
+		EC14D96123A2C3D100EB987E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D95F23A2C3D100EB987E /* Main.storyboard */; };
+		EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96223A2C3D500EB987E /* Assets.xcassets */; };
+		EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */; };
+		EC14D96B23A2C3D500EB987E /* TiMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EC14D97123A2C3D500EB987E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96F23A2C3D500EB987E /* Interface.storyboard */; };
+		EC14D97323A2C3D700EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D97223A2C3D700EB987E /* Assets.xcassets */; };
+		EC14D97A23A2C3D700EB987E /* TiMe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EC14D97923A2C3D700EB987E /* TiMe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EC14D97F23A2C3D700EB987E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D97E23A2C3D700EB987E /* InterfaceController.swift */; };
+		EC14D98123A2C3D700EB987E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98023A2C3D700EB987E /* ExtensionDelegate.swift */; };
+		EC14D98323A2C3D700EB987E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98223A2C3D700EB987E /* NotificationController.swift */; };
+		EC14D98523A2C3D700EB987E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98423A2C3D700EB987E /* ComplicationController.swift */; };
+		EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D98623A2C3D800EB987E /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC14D96C23A2C3D500EB987E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC14D94E23A2C3D100EB987E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC14D96923A2C3D500EB987E;
+			remoteInfo = "TiMe WatchKit App";
+		};
+		EC14D97B23A2C3D700EB987E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC14D94E23A2C3D100EB987E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC14D97823A2C3D700EB987E;
+			remoteInfo = "TiMe WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC14D98F23A2C3D800EB987E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EC14D97A23A2C3D700EB987E /* TiMe WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC14D99323A2C3D800EB987E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EC14D96B23A2C3D500EB987E /* TiMe WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EC14D95623A2C3D100EB987E /* TiMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC14D95923A2C3D100EB987E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC14D95D23A2C3D100EB987E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC14D96023A2C3D100EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC14D96223A2C3D500EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC14D96523A2C3D500EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC14D96723A2C3D500EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TiMe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC14D97023A2C3D500EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EC14D97223A2C3D700EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC14D97423A2C3D700EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC14D97923A2C3D700EB987E /* TiMe WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TiMe WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC14D97E23A2C3D700EB987E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EC14D98023A2C3D700EB987E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EC14D98223A2C3D700EB987E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EC14D98423A2C3D700EB987E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		EC14D98623A2C3D800EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC14D98823A2C3D800EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC14D95323A2C3D100EB987E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC14D97623A2C3D700EB987E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC14D94D23A2C3D100EB987E = {
+			isa = PBXGroup;
+			children = (
+				EC14D95823A2C3D100EB987E /* TiMe */,
+				EC14D96E23A2C3D500EB987E /* TiMe WatchKit App */,
+				EC14D97D23A2C3D700EB987E /* TiMe WatchKit Extension */,
+				EC14D95723A2C3D100EB987E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC14D95723A2C3D100EB987E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC14D95623A2C3D100EB987E /* TiMe.app */,
+				EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */,
+				EC14D97923A2C3D700EB987E /* TiMe WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC14D95823A2C3D100EB987E /* TiMe */ = {
+			isa = PBXGroup;
+			children = (
+				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
+				EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */,
+				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
+				EC14D95F23A2C3D100EB987E /* Main.storyboard */,
+				EC14D96223A2C3D500EB987E /* Assets.xcassets */,
+				EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */,
+				EC14D96723A2C3D500EB987E /* Info.plist */,
+			);
+			path = TiMe;
+			sourceTree = "<group>";
+		};
+		EC14D96E23A2C3D500EB987E /* TiMe WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				EC14D96F23A2C3D500EB987E /* Interface.storyboard */,
+				EC14D97223A2C3D700EB987E /* Assets.xcassets */,
+				EC14D97423A2C3D700EB987E /* Info.plist */,
+			);
+			path = "TiMe WatchKit App";
+			sourceTree = "<group>";
+		};
+		EC14D97D23A2C3D700EB987E /* TiMe WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC14D97E23A2C3D700EB987E /* InterfaceController.swift */,
+				EC14D98023A2C3D700EB987E /* ExtensionDelegate.swift */,
+				EC14D98223A2C3D700EB987E /* NotificationController.swift */,
+				EC14D98423A2C3D700EB987E /* ComplicationController.swift */,
+				EC14D98623A2C3D800EB987E /* Assets.xcassets */,
+				EC14D98823A2C3D800EB987E /* Info.plist */,
+				EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */,
+			);
+			path = "TiMe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC14D95523A2C3D100EB987E /* TiMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC14D99423A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe" */;
+			buildPhases = (
+				EC14D95223A2C3D100EB987E /* Sources */,
+				EC14D95323A2C3D100EB987E /* Frameworks */,
+				EC14D95423A2C3D100EB987E /* Resources */,
+				EC14D99323A2C3D800EB987E /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC14D96D23A2C3D500EB987E /* PBXTargetDependency */,
+			);
+			name = TiMe;
+			productName = TiMe;
+			productReference = EC14D95623A2C3D100EB987E /* TiMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC14D96923A2C3D500EB987E /* TiMe WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC14D99023A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe WatchKit App" */;
+			buildPhases = (
+				EC14D96823A2C3D500EB987E /* Resources */,
+				EC14D98F23A2C3D800EB987E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC14D97C23A2C3D700EB987E /* PBXTargetDependency */,
+			);
+			name = "TiMe WatchKit App";
+			productName = "TiMe WatchKit App";
+			productReference = EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EC14D97823A2C3D700EB987E /* TiMe WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC14D98C23A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe WatchKit Extension" */;
+			buildPhases = (
+				EC14D97523A2C3D700EB987E /* Sources */,
+				EC14D97623A2C3D700EB987E /* Frameworks */,
+				EC14D97723A2C3D700EB987E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TiMe WatchKit Extension";
+			productName = "TiMe WatchKit Extension";
+			productReference = EC14D97923A2C3D700EB987E /* TiMe WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC14D94E23A2C3D100EB987E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Gerrit Louis de Beuze";
+				TargetAttributes = {
+					EC14D95523A2C3D100EB987E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					EC14D96923A2C3D500EB987E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					EC14D97823A2C3D700EB987E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EC14D95123A2C3D100EB987E /* Build configuration list for PBXProject "TiMe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC14D94D23A2C3D100EB987E;
+			productRefGroup = EC14D95723A2C3D100EB987E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC14D95523A2C3D100EB987E /* TiMe */,
+				EC14D96923A2C3D500EB987E /* TiMe WatchKit App */,
+				EC14D97823A2C3D700EB987E /* TiMe WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC14D95423A2C3D100EB987E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */,
+				EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */,
+				EC14D96123A2C3D100EB987E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC14D96823A2C3D500EB987E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC14D97323A2C3D700EB987E /* Assets.xcassets in Resources */,
+				EC14D97123A2C3D500EB987E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC14D97723A2C3D700EB987E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC14D95223A2C3D100EB987E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */,
+				EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */,
+				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC14D97523A2C3D700EB987E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC14D98323A2C3D700EB987E /* NotificationController.swift in Sources */,
+				EC14D98523A2C3D700EB987E /* ComplicationController.swift in Sources */,
+				EC14D98123A2C3D700EB987E /* ExtensionDelegate.swift in Sources */,
+				EC14D97F23A2C3D700EB987E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC14D96D23A2C3D500EB987E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC14D96923A2C3D500EB987E /* TiMe WatchKit App */;
+			targetProxy = EC14D96C23A2C3D500EB987E /* PBXContainerItemProxy */;
+		};
+		EC14D97C23A2C3D700EB987E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC14D97823A2C3D700EB987E /* TiMe WatchKit Extension */;
+			targetProxy = EC14D97B23A2C3D700EB987E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC14D95F23A2C3D100EB987E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC14D96023A2C3D100EB987E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC14D96523A2C3D500EB987E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EC14D96F23A2C3D500EB987E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC14D97023A2C3D500EB987E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC14D98A23A2C3D800EB987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC14D98B23A2C3D800EB987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC14D98D23A2C3D800EB987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				INFOPLIST_FILE = "TiMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		EC14D98E23A2C3D800EB987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				INFOPLIST_FILE = "TiMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		EC14D99123A2C3D800EB987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				IBSC_MODULE = TiMe_WatchKit_Extension;
+				INFOPLIST_FILE = "TiMe WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		EC14D99223A2C3D800EB987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				IBSC_MODULE = TiMe_WatchKit_Extension;
+				INFOPLIST_FILE = "TiMe WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		EC14D99523A2C3D800EB987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				INFOPLIST_FILE = TiMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC14D99623A2C3D800EB987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 844F5P68D6;
+				INFOPLIST_FILE = TiMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC14D95123A2C3D100EB987E /* Build configuration list for PBXProject "TiMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC14D98A23A2C3D800EB987E /* Debug */,
+				EC14D98B23A2C3D800EB987E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC14D98C23A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC14D98D23A2C3D800EB987E /* Debug */,
+				EC14D98E23A2C3D800EB987E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC14D99023A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC14D99123A2C3D800EB987E /* Debug */,
+				EC14D99223A2C3D800EB987E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC14D99423A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC14D99523A2C3D800EB987E /* Debug */,
+				EC14D99623A2C3D800EB987E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC14D94E23A2C3D100EB987E /* Project object */;
+}
