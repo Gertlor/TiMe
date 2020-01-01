@@ -46,8 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="start.png"/>
                                 <connections>
-                                    <action selector="startButton:" destination="aOS-lE-sti" eventType="touchUpInside" id="xx1-08-FYG"/>
-                                    <action selector="startStopButtonPressed:" destination="aOS-lE-sti" eventType="touchUpInside" id="aqo-Co-HMT"/>
+                                    <action selector="startStop:" destination="aOS-lE-sti" eventType="touchUpInside" id="cce-HC-V4l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,7 +56,7 @@
                     <connections>
                         <outlet property="projectTableView" destination="q57-uu-Xcz" id="qgf-sK-WeA"/>
                         <outlet property="startStopButton" destination="AaT-zc-ZhV" id="j4o-gr-E4e"/>
-                        <outlet property="timerLabel" destination="Q8Q-rz-ar8" id="uR6-3n-GAW"/>
+                        <outlet property="timerLabel" destination="Q8Q-rz-ar8" id="MHF-yJ-IoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5x-j4-FCE" sceneMemberID="firstResponder"/>
