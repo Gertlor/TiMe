@@ -10,7 +10,6 @@
 		EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95923A2C3D100EB987E /* AppDelegate.swift */; };
 		EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */; };
 		EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* ViewController.swift */; };
-		EC14D96123A2C3D100EB987E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D95F23A2C3D100EB987E /* Main.storyboard */; };
 		EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96223A2C3D500EB987E /* Assets.xcassets */; };
 		EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */; };
 		EC14D96B23A2C3D500EB987E /* TiMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -22,6 +21,9 @@
 		EC14D98323A2C3D700EB987E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98223A2C3D700EB987E /* NotificationController.swift */; };
 		EC14D98523A2C3D700EB987E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98423A2C3D700EB987E /* ComplicationController.swift */; };
 		EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D98623A2C3D800EB987E /* Assets.xcassets */; };
+		ECDB373823BCD52F00AD86AF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373623BCD52F00AD86AF /* stop.png */; };
+		ECDB373923BCD52F00AD86AF /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373723BCD52F00AD86AF /* start.png */; };
+		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,6 @@
 		EC14D95923A2C3D100EB987E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC14D95D23A2C3D100EB987E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC14D96023A2C3D100EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC14D96223A2C3D500EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC14D96523A2C3D500EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC14D96723A2C3D500EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +88,9 @@
 		EC14D98623A2C3D800EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC14D98823A2C3D800EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		ECDB373623BCD52F00AD86AF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		ECDB373723BCD52F00AD86AF /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +134,14 @@
 		EC14D95823A2C3D100EB987E /* TiMe */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB373523BCD2AB00AD86AF /* Assets */,
 				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
 				EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */,
 				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
-				EC14D95F23A2C3D100EB987E /* Main.storyboard */,
 				EC14D96223A2C3D500EB987E /* Assets.xcassets */,
 				EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */,
 				EC14D96723A2C3D500EB987E /* Info.plist */,
+				ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */,
 			);
 			path = TiMe;
 			sourceTree = "<group>";
@@ -163,6 +168,15 @@
 				EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */,
 			);
 			path = "TiMe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		ECDB373523BCD2AB00AD86AF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				ECDB373723BCD52F00AD86AF /* start.png */,
+				ECDB373623BCD52F00AD86AF /* stop.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */,
+				ECDB373823BCD52F00AD86AF /* stop.png in Resources */,
+				ECDB373923BCD52F00AD86AF /* start.png in Resources */,
 				EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */,
-				EC14D96123A2C3D100EB987E /* Main.storyboard in Resources */,
+				ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +346,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EC14D95F23A2C3D100EB987E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC14D96023A2C3D100EB987E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -567,7 +575,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -585,7 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
