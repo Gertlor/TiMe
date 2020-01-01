@@ -34,7 +34,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-rz-ar8">
-                                <rect key="frame" x="0.0" y="165" width="375" height="87"/>
+                                <rect key="frame" x="0.0" y="221" width="375" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="72"/>
@@ -49,11 +49,20 @@
                                     <action selector="startStop:" destination="aOS-lE-sti" eventType="touchUpInside" id="cce-HC-V4l"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-yW-kgT">
+                                <rect key="frame" x="0.0" y="157" width="375" height="50.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="kBI-v4-kvg"/>
                     </view>
                     <connections>
+                        <outlet property="projectLabel" destination="fOm-yW-kgT" id="e5E-uZ-AaN"/>
                         <outlet property="projectTableView" destination="q57-uu-Xcz" id="qgf-sK-WeA"/>
                         <outlet property="startStopButton" destination="AaT-zc-ZhV" id="j4o-gr-E4e"/>
                         <outlet property="timerLabel" destination="Q8Q-rz-ar8" id="MHF-yJ-IoL"/>
