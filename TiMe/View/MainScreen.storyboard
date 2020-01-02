@@ -10,7 +10,6 @@
         <!--View Controller-->
         <scene sceneID="Kxb-pE-LMA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m5x-j4-FCE" sceneMemberID="firstResponder"/>
                 <viewController id="aOS-lE-sti" customClass="ViewController" customModule="TiMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6W-RL-3Ah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -35,7 +34,7 @@
                                     <action selector="startStop:" destination="aOS-lE-sti" eventType="touchUpInside" id="cce-HC-V4l"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-yW-kgT">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-yW-kgT">
                                 <rect key="frame" x="0.0" y="157" width="375" height="50.666666666666664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,12 +66,13 @@
                         <viewLayoutGuide key="safeArea" id="kBI-v4-kvg"/>
                     </view>
                     <connections>
-                        <outlet property="projectLabel" destination="fOm-yW-kgT" id="e5E-uZ-AaN"/>
-                        <outlet property="projectTableView" destination="q57-uu-Xcz" id="qgf-sK-WeA"/>
                         <outlet property="startStopButton" destination="AaT-zc-ZhV" id="j4o-gr-E4e"/>
+                        <outlet property="timeEntriesTableView" destination="q57-uu-Xcz" id="qgf-sK-WeA"/>
+                        <outlet property="timeEntryDescriptionLabel" destination="fOm-yW-kgT" id="e5E-uZ-AaN"/>
                         <outlet property="timerLabel" destination="Q8Q-rz-ar8" id="MHF-yJ-IoL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5x-j4-FCE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="135.96059113300493"/>
         </scene>

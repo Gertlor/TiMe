@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -15,14 +16,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	var minutes: Int = 0
 	var seconds: Int = 0
 	var timerString: String = ""
-	var projectTimes: [String] = []
-	var projectNames: [String] = []
 	
 	var startTimer: Bool = true
 	
-	@IBOutlet weak var projectLabel: UITextField!
+	var entryArray: [Entry] = []
+	
+	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	
+	@IBOutlet weak var timeEntryDescriptionLabel: UITextField!
 	@IBOutlet weak var timerLabel: UILabel!
-	@IBOutlet weak var projectTableView: UITableView!
+	@IBOutlet weak var timeEntriesTableView: UITableView!
 	@IBOutlet weak var startStopButton: UIButton!
 	
 	override func viewDidLoad() {
@@ -31,17 +34,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
 		tap.cancelsTouchesInView = false
 		view.addGestureRecognizer(tap)
+		loadEntries()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return projectNames.count
+		loadEntries()
+		return entryArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "Cell")
 		cell.backgroundColor = self.view.backgroundColor
-		cell.textLabel?.text = projectNames[indexPath.row]
-		cell.detailTextLabel?.text = projectTimes[indexPath.row]
+		let entry = entryArray[indexPath.row]
+		
+		cell.textLabel?.text = entry.timeDescription
+		cell.detailTextLabel?.text = entry.timeStamp
 		
 		return cell
 	}
@@ -57,7 +64,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 			timer.invalidate()
 			startTimer = true
 			startStopButton.setImage(UIImage(named:"start.png"), for: UIControl.State.normal)
-			addProjectToTableView()
+//			addProjectToTableView()
+			saveTimeEntry()
 		}
 	}
 	
@@ -81,17 +89,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		timerLabel.text = timerString
 	}
 	
-	func addProjectToTableView() {
-		projectTimes.insert(timerString, at: 0)
-		projectNames.insert(projectLabel.text ?? "Empty Project", at: 0)
-		projectTableView.reloadData()
+	func saveTimeEntry() {
+		
+		let newEntry = Entry(context: context)
+		newEntry.timeDescription = timeEntryDescriptionLabel.text
+		newEntry.timeStamp = timerString
+		
+		do {
+			try context.save()
+		} catch {
+			print("Error saving context \(error)")
+		}
+		
+		print("Saved succesfull")
+		
+		timeEntriesTableView.reloadData()
 		
 		hours = 0
 		minutes = 0
 		seconds = 0
 		timerString = "00:00:00"
 		timerLabel.text = timerString
-		projectLabel.text = ""
+		timeEntryDescriptionLabel.text = ""
+		
+	}
+	
+	func loadEntries() {
+		let request: NSFetchRequest<Entry> = Entry.fetchRequest()
+		do {
+			entryArray = try context.fetch(request)
+		} catch {
+			print("Error fetching data from context \(error)")
+		}
 		
 	}
 }
