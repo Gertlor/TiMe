@@ -129,7 +129,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		} catch {
 			print("Error fetching data from context \(error)")
 		}
-		
 	}
 }
 
