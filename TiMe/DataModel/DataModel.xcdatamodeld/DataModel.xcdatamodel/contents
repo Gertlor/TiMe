@@ -6,7 +6,7 @@
         <relationship name="entry_project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="project_entry" inverseEntity="Project"/>
     </entity>
     <entity name="Project" representedClassName=".Project" syncable="YES" codeGenerationType="class">
-        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="project_entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="entry_project" inverseEntity="Entry"/>
     </entity>
     <elements>

@@ -11,6 +11,9 @@ import CoreData
 
 class ProjectViewController: UITableViewController {
 	
+	
+	@IBOutlet var projectsTableView: UITableView!
+	
 	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
 	var projectArray: [Project] = []
@@ -31,7 +34,7 @@ class ProjectViewController: UITableViewController {
 		cell.backgroundColor = self.view.backgroundColor
 		let project = projectArray[indexPath.row]
 		
-		cell.textLabel?.text = project.category
+		cell.textLabel?.text = project.name
 		
 		return cell
 	}
@@ -51,6 +54,38 @@ class ProjectViewController: UITableViewController {
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
+	//MARK - Add new projects
+	@IBAction func addProject(_ sender: UIBarButtonItem) {
+		
+		var textField = UITextField()
+		
+		let alert = UIAlertController(title: "Add New Project", message: "", preferredStyle: .alert)
+		
+		let action = UIAlertAction(title: "Add Project", style: .default, handler: { (action) in
+			self.saveProject(projectName: textField.text ?? "No Name Project")
+		})
+		
+		alert.addTextField { (projectNameTextField) in
+			projectNameTextField.placeholder = "Create new project"
+			textField = projectNameTextField
+		}
+		
+		alert.addAction(action)
+		
+		present(alert, animated:true, completion: nil)
+		
+	}
+	
+	func saveProject(projectName: String) {
+		let newProject = Project(context: context)
+		newProject.name = projectName
+		
+		saveContext()
+	}
+	
+	
+	//MARK - CoreData Methods
+	
 	func saveContext() {
 		do {
 			try context.save()
@@ -58,7 +93,7 @@ class ProjectViewController: UITableViewController {
 			print("Error saving context \(error)")
 		}
 		
-//		projectsTableView.reloadData()
+		projectsTableView.reloadData()
 	}
 	
 	func loadEntries() {
