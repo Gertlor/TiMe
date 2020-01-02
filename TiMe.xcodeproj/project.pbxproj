@@ -21,6 +21,10 @@
 		EC14D98323A2C3D700EB987E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98223A2C3D700EB987E /* NotificationController.swift */; };
 		EC14D98523A2C3D700EB987E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D98423A2C3D700EB987E /* ComplicationController.swift */; };
 		EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D98623A2C3D800EB987E /* Assets.xcassets */; };
+		EC19DA8323BE1B9C0001E3B1 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8223BE1B9C0001E3B1 /* Project.swift */; };
+		EC19DA8523BE1BFF0001E3B1 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8423BE1BFF0001E3B1 /* Entry.swift */; };
+		EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */; };
+		EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
 		ECDB373823BCD52F00AD86AF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373623BCD52F00AD86AF /* stop.png */; };
 		ECDB373923BCD52F00AD86AF /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373723BCD52F00AD86AF /* start.png */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
@@ -88,6 +92,10 @@
 		EC14D98623A2C3D800EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC14D98823A2C3D800EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EC19DA8223BE1B9C0001E3B1 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		EC19DA8423BE1BFF0001E3B1 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		ECDB373623BCD52F00AD86AF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		ECDB373723BCD52F00AD86AF /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 				ECDB374223BCFCCF00AD86AF /* Model */,
 				ECDB374123BCFCC700AD86AF /* View */,
 				ECDB374023BCFCBE00AD86AF /* Controller */,
+				EC19DA8B23BE28990001E3B1 /* DataModel */,
 				ECDB373523BCD2AB00AD86AF /* Assets */,
 				EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */,
 				EC14D96223A2C3D500EB987E /* Assets.xcassets */,
@@ -169,6 +178,14 @@
 			path = "TiMe WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		EC19DA8B23BE28990001E3B1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		ECDB373523BCD2AB00AD86AF /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +200,7 @@
 			children = (
 				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
 				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
+				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +217,8 @@
 		ECDB374223BCFCCF00AD86AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC19DA8223BE1B9C0001E3B1 /* Project.swift */,
+				EC19DA8423BE1BFF0001E3B1 /* Entry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,9 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC19DA8523BE1BFF0001E3B1 /* Entry.swift in Sources */,
 				EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */,
+				EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */,
+				EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */,
 				EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */,
 				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
+				EC19DA8323BE1B9C0001E3B1 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +685,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC14D94E23A2C3D100EB987E /* Project object */;
 }
