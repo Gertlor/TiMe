@@ -34,7 +34,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
 		tap.cancelsTouchesInView = false
 		view.addGestureRecognizer(tap)
-		loadEntries()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +51,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		
 		return cell
 	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			entryArray.remove(at: indexPath.row)
+			context.delete(entryArray[indexPath.row])
+			saveContext()
+		}
+	}
 
 	
 	@IBAction func startStop(_ sender: UIButton) {
@@ -64,7 +71,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 			timer.invalidate()
 			startTimer = true
 			startStopButton.setImage(UIImage(named:"start.png"), for: UIControl.State.normal)
-//			addProjectToTableView()
 			saveTimeEntry()
 		}
 	}
@@ -95,15 +101,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
 		newEntry.timeStamp = timerString
 		
-		do {
-			try context.save()
-		} catch {
-			print("Error saving context \(error)")
-		}
-		
-		print("Saved succesfull")
-		
-		timeEntriesTableView.reloadData()
+		saveContext()
 		
 		hours = 0
 		minutes = 0
@@ -112,6 +110,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		timerLabel.text = timerString
 		timeEntryDescriptionLabel.text = ""
 		
+	}
+	
+	func saveContext() {
+		do {
+			try context.save()
+		} catch {
+			print("Error saving context \(error)")
+		}
+		
+		timeEntriesTableView.reloadData()
 	}
 	
 	func loadEntries() {
