@@ -54,8 +54,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			entryArray.remove(at: indexPath.row)
 			context.delete(entryArray[indexPath.row])
+			entryArray.remove(at: indexPath.row)
 			saveContext()
 		}
 	}

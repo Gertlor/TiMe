@@ -1,5 +1,5 @@
 //
-//  ProjectViewController.swift
+//  SettingsViewController.swift
 //  TiMe
 //
 //  Created by Gerrit Louis on 02/01/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProjectViewController: UITableViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

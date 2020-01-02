@@ -1,5 +1,5 @@
 //
-//  ProjectViewController.swift
+//  InsightsViewController.swift
 //  TiMe
 //
 //  Created by Gerrit Louis on 02/01/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProjectViewController: UITableViewController {
+class InsightsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

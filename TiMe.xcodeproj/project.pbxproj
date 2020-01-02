@@ -23,6 +23,8 @@
 		EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D98623A2C3D800EB987E /* Assets.xcassets */; };
 		EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */; };
 		EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
+		EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */; };
+		EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */; };
 		ECDB373823BCD52F00AD86AF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373623BCD52F00AD86AF /* stop.png */; };
 		ECDB373923BCD52F00AD86AF /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373723BCD52F00AD86AF /* start.png */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
@@ -92,6 +94,8 @@
 		EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
+		EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ECDB373623BCD52F00AD86AF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		ECDB373723BCD52F00AD86AF /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
 				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
 				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
+				EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */,
+				EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,9 +359,11 @@
 			files = (
 				EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */,
 				EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */,
+				EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */,
 				EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */,
 				EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */,
 				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
+				EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
