@@ -31,9 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		timerLabel.text = "00:00:00"
-		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
-		tap.cancelsTouchesInView = false
-		view.addGestureRecognizer(tap)
+		self.setupToHideKeyboardOnTapOnView()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,6 +127,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		} catch {
 			print("Error fetching data from context \(error)")
 		}
+	}
+}
+
+extension UIViewController {
+	func setupToHideKeyboardOnTapOnView() {
+		let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+		tap.cancelsTouchesInView = false
+		view.addGestureRecognizer(tap)
+	}
+	
+	@objc func dismissKeyboard() {
+		view.endEditing(true)
 	}
 }
 

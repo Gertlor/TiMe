@@ -20,14 +20,15 @@ class ProjectViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.setupToHideKeyboardOnTapOnView()
+		loadEntries()
     }
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		loadEntries()
 		return projectArray.count
 	}
 	
-	//MARK - Tableview Datasource Methods
+	//MARK: - Tableview Datasource Methods
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "Cell")
@@ -47,14 +48,14 @@ class ProjectViewController: UITableViewController {
 		}
 	}
 	
-	//MARK = Tableview Delegate Methods
+	//MARK: - Tableview Delegate Methods
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
-	//MARK - Add new projects
+	//MARK: - Add new projects
 	@IBAction func addProject(_ sender: UIBarButtonItem) {
 		
 		var textField = UITextField()
@@ -84,8 +85,7 @@ class ProjectViewController: UITableViewController {
 	}
 	
 	
-	//MARK - CoreData Methods
-	
+	//MARK: - CoreData Methods
 	func saveContext() {
 		do {
 			try context.save()
@@ -93,16 +93,35 @@ class ProjectViewController: UITableViewController {
 			print("Error saving context \(error)")
 		}
 		
-		projectsTableView.reloadData()
+		loadEntries()
 	}
 	
-	func loadEntries() {
-		let request: NSFetchRequest<Project> = Project.fetchRequest()
+	func loadEntries(request: NSFetchRequest<Project> = Project.fetchRequest()) {
 		do {
 			projectArray = try context.fetch(request)
 		} catch {
 			print("Error fetching data from context \(error)")
 		}
+		projectsTableView.reloadData()
 	}
-    
+}
+
+
+//MARK: - Searchbar methods
+extension ProjectViewController: UISearchBarDelegate {
+	
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		if searchBar.text?.count == 0 {
+			loadEntries()
+		} else {
+			let request: NSFetchRequest<Project> = Project.fetchRequest()
+			
+			request.predicate = NSPredicate(format: "name CONTAINS %@", searchBar.text!)
+			
+			request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+
+			loadEntries(request: request)
+		}
+		
+	}
 }

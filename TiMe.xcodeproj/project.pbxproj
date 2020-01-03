@@ -138,10 +138,11 @@
 		EC14D95823A2C3D100EB987E /* TiMe */ = {
 			isa = PBXGroup;
 			children = (
+				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
+				EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */,
 				EC19DA8B23BE28990001E3B1 /* DataModel */,
 				ECDB374123BCFCC700AD86AF /* View */,
 				ECDB374023BCFCBE00AD86AF /* Controller */,
-				EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */,
 				EC14D96223A2C3D500EB987E /* Assets.xcassets */,
 				EC14D96723A2C3D500EB987E /* Info.plist */,
 			);
@@ -183,7 +184,6 @@
 		ECDB374023BCFCBE00AD86AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC14D95923A2C3D100EB987E /* AppDelegate.swift */,
 				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
 				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
 				EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */,
