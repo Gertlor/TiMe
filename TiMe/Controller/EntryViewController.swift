@@ -19,43 +19,55 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	var startTimer: Bool = true
 	
-	var entryArray: [Entry] = []
+	var projectArray: [Project] = []
+	var selectedProject: Project?
 	
 	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
+	@IBOutlet weak var projectsTableView: UITableView!
+	@IBOutlet weak var showHideProjectTVButton: UIButton!
 	@IBOutlet weak var timeEntryDescriptionLabel: UITextField!
 	@IBOutlet weak var timerLabel: UILabel!
-	@IBOutlet weak var timeEntriesTableView: UITableView!
 	@IBOutlet weak var startStopButton: UIButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		timerLabel.text = "00:00:00"
 		self.setupToHideKeyboardOnTapOnView()
+		
+		timerLabel.text = "00:00:00"
+		projectsTableView.isHidden = true
+		loadProjects()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		loadEntries()
-		return entryArray.count
+		return projectArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "Cell")
 		cell.backgroundColor = self.view.backgroundColor
-		let entry = entryArray[indexPath.row]
+		let project = projectArray[indexPath.row]
 		
-		cell.textLabel?.text = entry.timeDescription
-		cell.detailTextLabel?.text = entry.timeStamp
+		cell.textLabel?.text = project.name
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			context.delete(entryArray[indexPath.row])
-			entryArray.remove(at: indexPath.row)
+			context.delete(projectArray[indexPath.row])
+			projectArray.remove(at: indexPath.row)
 			saveContext()
 		}
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		selectedProject = projectArray[indexPath.row]
+		
+		showHideProjectTVButton.setTitle(selectedProject!.name, for: .normal)
+		hideTableView(hide: true)
+		
 	}
 
 	
@@ -117,17 +129,30 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 			print("Error saving context \(error)")
 		}
 		
-		timeEntriesTableView.reloadData()
+		loadProjects()
 	}
 	
-	func loadEntries() {
-		let request: NSFetchRequest<Entry> = Entry.fetchRequest()
+	//MARK: - Project methods
+	
+	func loadProjects(request: NSFetchRequest<Project> = Project.fetchRequest()) {
 		do {
-			entryArray = try context.fetch(request)
+			projectArray = try context.fetch(request)
 		} catch {
 			print("Error fetching data from context \(error)")
 		}
+		projectsTableView.reloadData()
 	}
+	
+	@IBAction func showHideProjectTableView(_ sender: UIButton) {
+		self.projectsTableView.isHidden == true ? hideTableView(hide: false) : hideTableView(hide: true)
+	}
+	
+	func hideTableView(hide: Bool) {
+		UIView.animate(withDuration: 0.3) {
+			hide ? (self.projectsTableView.isHidden = true) : (self.projectsTableView.isHidden = false)
+		}
+	}
+	
 }
 
 extension UIViewController {
@@ -141,4 +166,3 @@ extension UIViewController {
 		view.endEditing(true)
 	}
 }
-
