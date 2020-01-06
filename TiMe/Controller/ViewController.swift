@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 	var timer = Timer()
 	var hours: Int = 0
@@ -36,7 +36,7 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		loadEntries()
-		return entryArray.countç
+		return entryArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,6 +58,7 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		}
 	}
 
+	
 	@IBAction func startStop(_ sender: UIButton) {
 		if startTimer == true {
 			timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)

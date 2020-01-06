@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95923A2C3D100EB987E /* AppDelegate.swift */; };
 		EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */; };
-		EC14D95E23A2C3D100EB987E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* EntryViewController.swift */; };
+		EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* ViewController.swift */; };
 		EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96223A2C3D500EB987E /* Assets.xcassets */; };
 		EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */; };
 		EC14D96B23A2C3D500EB987E /* TiMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -74,7 +74,7 @@
 		EC14D95623A2C3D100EB987E /* TiMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC14D95923A2C3D100EB987E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC14D95D23A2C3D100EB987E /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		EC14D95D23A2C3D100EB987E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC14D96223A2C3D500EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC14D96523A2C3D500EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC14D96723A2C3D500EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		ECDB374023BCFCBE00AD86AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC14D95D23A2C3D100EB987E /* EntryViewController.swift */,
+				EC14D95D23A2C3D100EB987E /* ViewController.swift */,
 				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
 				EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */,
 				EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */,
@@ -333,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC14D95E23A2C3D100EB987E /* EntryViewController.swift in Sources */,
+				EC14D95E23A2C3D100EB987E /* ViewController.swift in Sources */,
 				EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */,
 				EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */,
 				EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */,
