@@ -36,7 +36,7 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		loadEntries()
-		return entryArray.count
+		return entryArray.countç
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
