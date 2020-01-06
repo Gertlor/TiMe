@@ -62,7 +62,6 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
 		selectedProject = projectArray[indexPath.row]
 		
 		showHideProjectTVButton.setTitle(selectedProject!.name, for: .normal)
@@ -110,6 +109,7 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		let newEntry = Entry(context: context)
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
 		newEntry.timeStamp = timerString
+		newEntry.parentProject = selectedProject
 		
 		saveContext()
 		
@@ -119,6 +119,7 @@ class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		timerString = "00:00:00"
 		timerLabel.text = timerString
 		timeEntryDescriptionLabel.text = ""
+		showHideProjectTVButton.setTitle("Select a project", for: .normal)
 		
 	}
 	
