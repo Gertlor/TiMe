@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EntryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 	var timer = Timer()
 	var hours: Int = 0
