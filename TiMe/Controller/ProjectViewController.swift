@@ -21,7 +21,7 @@ class ProjectViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.setupToHideKeyboardOnTapOnView()
-		loadEntries()
+		loadProjects()
     }
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +35,7 @@ class ProjectViewController: UITableViewController {
 		cell.backgroundColor = self.view.backgroundColor
 		let project = projectArray[indexPath.row]
 		
-		cell.textLabel?.text = project.name
+		cell.textLabel?.text = project.name ?? "No projects added yet"
 		
 		return cell
 	}
@@ -51,8 +51,16 @@ class ProjectViewController: UITableViewController {
 	//MARK: - Tableview Delegate Methods
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: "goToEntries", sender: self)
+//		tableView.deselectRow(at: indexPath, animated: true)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let destinationVC = segue.destination as! EntryViewController
 		
-		tableView.deselectRow(at: indexPath, animated: true)
+		if let indexPath = tableView.indexPathForSelectedRow {
+			destinationVC.selectedProject = projectArray[indexPath.row]
+		}
 	}
 	
 	//MARK: - Add new projects
@@ -93,10 +101,10 @@ class ProjectViewController: UITableViewController {
 			print("Error saving context \(error)")
 		}
 		
-		loadEntries()
+		loadProjects()
 	}
 	
-	func loadEntries(request: NSFetchRequest<Project> = Project.fetchRequest()) {
+	func loadProjects(request: NSFetchRequest<Project> = Project.fetchRequest()) {
 		do {
 			projectArray = try context.fetch(request)
 		} catch {
@@ -112,7 +120,7 @@ extension ProjectViewController: UISearchBarDelegate {
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		if searchBar.text?.count == 0 {
-			loadEntries()
+			loadProjects()
 		} else {
 			let request: NSFetchRequest<Project> = Project.fetchRequest()
 			
@@ -120,8 +128,9 @@ extension ProjectViewController: UISearchBarDelegate {
 			
 			request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
 
-			loadEntries(request: request)
+			loadProjects(request: request)
 		}
 		
 	}
 }
+

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C42714583DD2D6694EC7DD /* Pods_TiMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99EABCADB2D3246FFEE676A4 /* Pods_TiMe.framework */; };
+		D4D474A397494EB45079E0AF /* Pods_TiMe_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A94BE4E9A10F3138D1D522E /* Pods_TiMe_WatchKit_App.framework */; };
 		EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95923A2C3D100EB987E /* AppDelegate.swift */; };
 		EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */; };
-		EC14D95E23A2C3D100EB987E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* EntryViewController.swift */; };
+		EC14D95E23A2C3D100EB987E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14D95D23A2C3D100EB987E /* TimerViewController.swift */; };
 		EC14D96323A2C3D500EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96223A2C3D500EB987E /* Assets.xcassets */; };
 		EC14D96623A2C3D500EB987E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC14D96423A2C3D500EB987E /* LaunchScreen.storyboard */; };
 		EC14D96B23A2C3D500EB987E /* TiMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC14D96A23A2C3D500EB987E /* TiMe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -25,6 +27,7 @@
 		EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
 		EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */; };
 		EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */; };
+		EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -71,10 +74,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A94BE4E9A10F3138D1D522E /* Pods_TiMe_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54202139E4A603677A214FCE /* Pods-TiMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiMe/Pods-TiMe.release.xcconfig"; sourceTree = "<group>"; };
+		781F1DC35DCEC01E6EBD9482 /* Pods-TiMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiMe/Pods-TiMe.debug.xcconfig"; sourceTree = "<group>"; };
+		8F4C22EFD14801FDE8DF5CF8 /* Pods-TiMe WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiMe WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiMe WatchKit App/Pods-TiMe WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		99EABCADB2D3246FFEE676A4 /* Pods_TiMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FC5E590F6632EAEF637EBD /* Pods-TiMe WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiMe WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiMe WatchKit App/Pods-TiMe WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		EC14D95623A2C3D100EB987E /* TiMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC14D95923A2C3D100EB987E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC14D95B23A2C3D100EB987E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC14D95D23A2C3D100EB987E /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		EC14D95D23A2C3D100EB987E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		EC14D96223A2C3D500EB987E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC14D96523A2C3D500EB987E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC14D96723A2C3D500EB987E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,14 +103,25 @@
 		EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		ECBD3C39E719F77B4B1A85C3 /* Pods_TiMe_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07B2EB72D55C287B3E1DBBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D474A397494EB45079E0AF /* Pods_TiMe_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC14D95323A2C3D100EB987E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C42714583DD2D6694EC7DD /* Pods_TiMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +135,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21ABCCFA171CC8349327DB1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				781F1DC35DCEC01E6EBD9482 /* Pods-TiMe.debug.xcconfig */,
+				54202139E4A603677A214FCE /* Pods-TiMe.release.xcconfig */,
+				8F4C22EFD14801FDE8DF5CF8 /* Pods-TiMe WatchKit App.debug.xcconfig */,
+				D8FC5E590F6632EAEF637EBD /* Pods-TiMe WatchKit App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB2C4180BF0CD39187B96215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99EABCADB2D3246FFEE676A4 /* Pods_TiMe.framework */,
+				2A94BE4E9A10F3138D1D522E /* Pods_TiMe_WatchKit_App.framework */,
+				ECBD3C39E719F77B4B1A85C3 /* Pods_TiMe_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC14D94D23A2C3D100EB987E = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +163,8 @@
 				EC14D96E23A2C3D500EB987E /* TiMe WatchKit App */,
 				EC14D97D23A2C3D700EB987E /* TiMe WatchKit Extension */,
 				EC14D95723A2C3D100EB987E /* Products */,
+				21ABCCFA171CC8349327DB1C /* Pods */,
+				BB2C4180BF0CD39187B96215 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,10 +227,11 @@
 		ECDB374023BCFCBE00AD86AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC14D95D23A2C3D100EB987E /* EntryViewController.swift */,
+				EC14D95D23A2C3D100EB987E /* TimerViewController.swift */,
 				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
 				EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */,
 				EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */,
+				EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC14D99423A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe" */;
 			buildPhases = (
+				369056218E6BE337088E127C /* [CP] Check Pods Manifest.lock */,
 				EC14D95223A2C3D100EB987E /* Sources */,
 				EC14D95323A2C3D100EB987E /* Frameworks */,
 				EC14D95423A2C3D100EB987E /* Resources */,
@@ -227,8 +272,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC14D99023A2C3D800EB987E /* Build configuration list for PBXNativeTarget "TiMe WatchKit App" */;
 			buildPhases = (
+				13168DCDFD6884EA934A8FC8 /* [CP] Check Pods Manifest.lock */,
 				EC14D96823A2C3D500EB987E /* Resources */,
 				EC14D98F23A2C3D800EB987E /* Embed App Extensions */,
+				07B2EB72D55C287B3E1DBBA3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,16 +375,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13168DCDFD6884EA934A8FC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiMe WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		369056218E6BE337088E127C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC14D95223A2C3D100EB987E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC14D95E23A2C3D100EB987E /* EntryViewController.swift in Sources */,
+				EC14D95E23A2C3D100EB987E /* TimerViewController.swift in Sources */,
 				EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */,
 				EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */,
 				EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */,
 				EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */,
+				EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */,
 				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
 				EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */,
 			);
@@ -549,6 +644,7 @@
 		};
 		EC14D99123A2C3D800EB987E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F4C22EFD14801FDE8DF5CF8 /* Pods-TiMe WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -568,6 +664,7 @@
 		};
 		EC14D99223A2C3D800EB987E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FC5E590F6632EAEF637EBD /* Pods-TiMe WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -587,6 +684,7 @@
 		};
 		EC14D99523A2C3D800EB987E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781F1DC35DCEC01E6EBD9482 /* Pods-TiMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +703,7 @@
 		};
 		EC14D99623A2C3D800EB987E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54202139E4A603677A214FCE /* Pods-TiMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
