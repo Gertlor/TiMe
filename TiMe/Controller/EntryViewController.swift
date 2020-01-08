@@ -38,6 +38,14 @@ class EntryViewController: UITableViewController {
 		return cell
 	}
 	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			context.delete(entries[indexPath.row])
+			entries.remove(at: indexPath.row)
+			saveContext()
+		}
+	}
+	
 	//MARK: - TableView Delegate Methods
 	
 	
@@ -56,7 +64,18 @@ class EntryViewController: UITableViewController {
 		} catch {
 			print("Error fetching data from context \(error)")
 		}
+		
 		tableView.reloadData()
+	}
+	
+	func saveContext() {
+		do {
+			try context.save()
+		} catch {
+			print("Error saving context \(error)")
+		}
+		
+		loadEntries()
 	}
 
 }

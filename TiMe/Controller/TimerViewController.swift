@@ -16,6 +16,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var minutes: Int = 0
 	var seconds: Int = 0
 	var timerString: String = ""
+	var startDate: Date = Date()
+	var endDate: Date = Date()
 	
 	var startTimer: Bool = true
 	
@@ -53,14 +55,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		return cell
 	}
 	
-	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-		if editingStyle == .delete {
-			context.delete(projectArray[indexPath.row])
-			projectArray.remove(at: indexPath.row)
-			saveContext()
-		}
-	}
-	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		selectedProject = projectArray[indexPath.row]
 		
@@ -75,11 +69,13 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 			timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
 			startTimer = false
 			startStopButton.setImage(UIImage(named: "stop.png"), for: UIControl.State.normal)
+			startDate = Date()
 			self.view.endEditing(true)
 		} else {
 			timer.invalidate()
 			startTimer = true
 			startStopButton.setImage(UIImage(named:"start.png"), for: UIControl.State.normal)
+			endDate = Date()
 			saveTimeEntry()
 		}
 	}
@@ -110,6 +106,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
 		newEntry.timeStamp = timerString
 		newEntry.parentProject = selectedProject
+		newEntry.startTime = startDate
+		newEntry.endTime = endDate
 		
 		saveContext()
 		

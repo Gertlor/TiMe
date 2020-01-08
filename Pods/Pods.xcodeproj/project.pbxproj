@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		188895BB5C2F534BD01B16651BC7CECC /* Pods-TiMe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1C4A9A5794DA5107D75F346EB9571C /* Pods-TiMe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		297FE28CC05C67F845C91E61EEF3C01B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		4761E67F8F2DD3DA9FF113B794CA8DA2 /* Pods-TiMe WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54770B283D13B8333091D78FEB0F9F55 /* Pods-TiMe WatchKit App-dummy.m */; };
+		C85B7256FF2D0D68ACDD0E9983340557 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		D0BEDDA13A368060ABB882204D530621 /* Pods-TiMe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7724A18CCB6EDBDDB1314324AA631A /* Pods-TiMe-dummy.m */; };
+		E49953B7B2DF2018D97FE807876FDBA0 /* Pods-TiMe WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8306F1CA50B26C419606AE11EEDF2A48 /* Pods-TiMe WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C14F27F700F4B162F23BCE4FDC3C855 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2F9EE101E460C57E169B2E64BCFA5DAD /* Pods-TiMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiMe.debug.xcconfig"; sourceTree = "<group>"; };
+		419DF2451F2001439696C0835036ACD1 /* Pods_TiMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54770B283D13B8333091D78FEB0F9F55 /* Pods-TiMe WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TiMe WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		6A7724A18CCB6EDBDDB1314324AA631A /* Pods-TiMe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TiMe-dummy.m"; sourceTree = "<group>"; };
+		70D5E02916501B01D9363980D367C5DB /* Pods-TiMe WatchKit App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiMe WatchKit App-resources.sh"; sourceTree = "<group>"; };
+		7220260041E85CC8D1E831A91F7BB4D3 /* Pods-TiMe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TiMe-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A0720C61A60AE2EA12CFB8185182C1F /* Pods-TiMe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TiMe-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8108A8B9A213714A99CF120434415E41 /* Pods-TiMe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiMe-resources.sh"; sourceTree = "<group>"; };
+		8306F1CA50B26C419606AE11EEDF2A48 /* Pods-TiMe WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TiMe WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		8B114C0C1F99867DBD05E521AA7F07D3 /* Pods_TiMe_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D7EF2E106A7A97E7BA17285AA2DF1A8 /* Pods-TiMe WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TiMe WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA1C4A9A5794DA5107D75F346EB9571C /* Pods-TiMe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TiMe-umbrella.h"; sourceTree = "<group>"; };
+		B1A5FD95A11CBC5DB4AFC25CCD716F45 /* Pods-TiMe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TiMe.modulemap"; sourceTree = "<group>"; };
+		B58889783E9F6A2D7992121783848414 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D5F8E926F45F58003839201FB867673D /* Pods-TiMe WatchKit App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiMe WatchKit App-frameworks.sh"; sourceTree = "<group>"; };
+		DB08CD01192C8B79F023BD231AB8E694 /* Pods-TiMe WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TiMe WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC4AAA15694A318447AD17DBE6C075F6 /* Pods-TiMe WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiMe WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		EDFAA9EB242526CB67D9E35E203C16A8 /* Pods-TiMe WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TiMe WatchKit App.modulemap"; sourceTree = "<group>"; };
+		F0C9E55D3ECF06B581A7C69DFCC7ADD9 /* Pods-TiMe WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiMe WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F898D1D45826934B1FDA47470121640E /* Pods-TiMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiMe.release.xcconfig"; sourceTree = "<group>"; };
+		FC747248C0C02400DD2275A453F2AD5B /* Pods-TiMe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiMe-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31BE3AD6AA8B330BAD8C3CB96EBE278A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85B7256FF2D0D68ACDD0E9983340557 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96DB97BCD009A0995F990E4CD67D137B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297FE28CC05C67F845C91E61EEF3C01B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30273A77658FD41AE9BC71C0C6188392 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				419DF2451F2001439696C0835036ACD1 /* Pods_TiMe.framework */,
+				8B114C0C1F99867DBD05E521AA7F07D3 /* Pods_TiMe_WatchKit_App.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		327087D2F2BB8DA75A40D17244131BAA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C82CB9CB6FD3C13C8FEC6086A09D28CF /* Pods-TiMe */,
+				BEE01571F510DB35557013EE1A1562FD /* Pods-TiMe WatchKit App */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BEE01571F510DB35557013EE1A1562FD /* Pods-TiMe WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0C14F27F700F4B162F23BCE4FDC3C855 /* Info.plist */,
+				EDFAA9EB242526CB67D9E35E203C16A8 /* Pods-TiMe WatchKit App.modulemap */,
+				9D7EF2E106A7A97E7BA17285AA2DF1A8 /* Pods-TiMe WatchKit App-acknowledgements.markdown */,
+				DB08CD01192C8B79F023BD231AB8E694 /* Pods-TiMe WatchKit App-acknowledgements.plist */,
+				54770B283D13B8333091D78FEB0F9F55 /* Pods-TiMe WatchKit App-dummy.m */,
+				D5F8E926F45F58003839201FB867673D /* Pods-TiMe WatchKit App-frameworks.sh */,
+				70D5E02916501B01D9363980D367C5DB /* Pods-TiMe WatchKit App-resources.sh */,
+				8306F1CA50B26C419606AE11EEDF2A48 /* Pods-TiMe WatchKit App-umbrella.h */,
+				EC4AAA15694A318447AD17DBE6C075F6 /* Pods-TiMe WatchKit App.debug.xcconfig */,
+				F0C9E55D3ECF06B581A7C69DFCC7ADD9 /* Pods-TiMe WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-TiMe WatchKit App";
+			path = "Target Support Files/Pods-TiMe WatchKit App";
+			sourceTree = "<group>";
+		};
+		C82CB9CB6FD3C13C8FEC6086A09D28CF /* Pods-TiMe */ = {
+			isa = PBXGroup;
+			children = (
+				B58889783E9F6A2D7992121783848414 /* Info.plist */,
+				B1A5FD95A11CBC5DB4AFC25CCD716F45 /* Pods-TiMe.modulemap */,
+				7A0720C61A60AE2EA12CFB8185182C1F /* Pods-TiMe-acknowledgements.markdown */,
+				7220260041E85CC8D1E831A91F7BB4D3 /* Pods-TiMe-acknowledgements.plist */,
+				6A7724A18CCB6EDBDDB1314324AA631A /* Pods-TiMe-dummy.m */,
+				FC747248C0C02400DD2275A453F2AD5B /* Pods-TiMe-frameworks.sh */,
+				8108A8B9A213714A99CF120434415E41 /* Pods-TiMe-resources.sh */,
+				AA1C4A9A5794DA5107D75F346EB9571C /* Pods-TiMe-umbrella.h */,
+				2F9EE101E460C57E169B2E64BCFA5DAD /* Pods-TiMe.debug.xcconfig */,
+				F898D1D45826934B1FDA47470121640E /* Pods-TiMe.release.xcconfig */,
+			);
+			name = "Pods-TiMe";
+			path = "Target Support Files/Pods-TiMe";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				24390EFD555DD124430DFF9724065945 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				30273A77658FD41AE9BC71C0C6188392 /* Products */,
+				327087D2F2BB8DA75A40D17244131BAA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		737639129F2E64D12961874B5AD447ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188895BB5C2F534BD01B16651BC7CECC /* Pods-TiMe-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A3564E420444BA7E31814C22AC10F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49953B7B2DF2018D97FE807876FDBA0 /* Pods-TiMe WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EE084B235946DB9C6F672267B8E8B17 /* Pods-TiMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B171C58F186555842263319B67C47B2 /* Build configuration list for PBXNativeTarget "Pods-TiMe" */;
+			buildPhases = (
+				737639129F2E64D12961874B5AD447ED /* Headers */,
+				08EA70E460E3F2FD8A1F818BFD1E7418 /* Sources */,
+				96DB97BCD009A0995F990E4CD67D137B /* Frameworks */,
+				1D9A221892A8E64CD7DCCBA4C1EE6391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TiMe";
+			productName = "Pods-TiMe";
+			productReference = 419DF2451F2001439696C0835036ACD1 /* Pods_TiMe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8BCFFA7718BD60A8F49E0273828538FF /* Pods-TiMe WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9593A4F5D872A77D64537A51DE80929 /* Build configuration list for PBXNativeTarget "Pods-TiMe WatchKit App" */;
+			buildPhases = (
+				C8A3564E420444BA7E31814C22AC10F5 /* Headers */,
+				18DB215BDB5FA1969B649310FBE82402 /* Sources */,
+				31BE3AD6AA8B330BAD8C3CB96EBE278A /* Frameworks */,
+				8F55E23F4761C140B466CE2D66042C97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TiMe WatchKit App";
+			productName = "Pods-TiMe WatchKit App";
+			productReference = 8B114C0C1F99867DBD05E521AA7F07D3 /* Pods_TiMe_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 30273A77658FD41AE9BC71C0C6188392 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EE084B235946DB9C6F672267B8E8B17 /* Pods-TiMe */,
+				8BCFFA7718BD60A8F49E0273828538FF /* Pods-TiMe WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D9A221892A8E64CD7DCCBA4C1EE6391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F55E23F4761C140B466CE2D66042C97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08EA70E460E3F2FD8A1F818BFD1E7418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BEDDA13A368060ABB882204D530621 /* Pods-TiMe-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DB215BDB5FA1969B649310FBE82402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4761E67F8F2DD3DA9FF113B794CA8DA2 /* Pods-TiMe WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3073E9329E3D859060CB4B679A6C557C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		510A1DC8E0D9558645F2BDC55891A93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9EE101E460C57E169B2E64BCFA5DAD /* Pods-TiMe.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TiMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TiMe/Pods-TiMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8BA21A152B78E1EF3879BC0C41985E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4AAA15694A318447AD17DBE6C075F6 /* Pods-TiMe WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TiMe WatchKit App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TiMe WatchKit App/Pods-TiMe WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		996F48957FAB7025E5F2F901FE512C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F898D1D45826934B1FDA47470121640E /* Pods-TiMe.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TiMe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TiMe/Pods-TiMe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB475890E1FC9EFE3F9FCC2324A783AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C9E55D3ECF06B581A7C69DFCC7ADD9 /* Pods-TiMe WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TiMe WatchKit App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TiMe WatchKit App/Pods-TiMe WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E728C0BD3857BC99A5D2AD6ACDFBA09A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B171C58F186555842263319B67C47B2 /* Build configuration list for PBXNativeTarget "Pods-TiMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				510A1DC8E0D9558645F2BDC55891A93B /* Debug */,
+				996F48957FAB7025E5F2F901FE512C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E728C0BD3857BC99A5D2AD6ACDFBA09A /* Debug */,
+				3073E9329E3D859060CB4B679A6C557C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9593A4F5D872A77D64537A51DE80929 /* Build configuration list for PBXNativeTarget "Pods-TiMe WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA21A152B78E1EF3879BC0C41985E48 /* Debug */,
+				DB475890E1FC9EFE3F9FCC2324A783AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
