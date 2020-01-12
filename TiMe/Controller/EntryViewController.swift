@@ -31,9 +31,8 @@ class EntryViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//		let cell = EntryTableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "EntryCell")
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath) as! EntryTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath) as! ProjectEntryTableViewCell
 		
 		cell.entryTitleLabel?.text = entries[indexPath.row].timeDescription
 		cell.entryTimeLabel?.text = entries[indexPath.row].timeStamp
@@ -89,7 +88,7 @@ class EntryViewController: UITableViewController {
 	}
 }
 
-class EntryTableViewCell: UITableViewCell {
+class ProjectEntryTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var entryTitleLabel: UILabel!
 	@IBOutlet weak var entryStartDateLabel: UILabel!

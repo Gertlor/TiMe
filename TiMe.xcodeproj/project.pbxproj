@@ -25,7 +25,7 @@
 		EC14D98723A2C3D800EB987E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC14D98623A2C3D800EB987E /* Assets.xcassets */; };
 		EC19DA8723BE25040001E3B1 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */; };
 		EC19DA8A23BE288D0001E3B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
-		EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */; };
+		EC19DAB023BE4E0A0001E3B1 /* CustomDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAAF23BE4E0A0001E3B1 /* CustomDateViewController.swift */; };
 		EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */; };
 		EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
@@ -101,7 +101,7 @@
 		EC14D98923A2C3D800EB987E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		EC19DA8923BE288D0001E3B1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
+		EC19DAAF23BE4E0A0001E3B1 /* CustomDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateViewController.swift; sourceTree = "<group>"; };
 		EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ECBD3C39E719F77B4B1A85C3 /* Pods_TiMe_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,7 +229,7 @@
 			children = (
 				EC14D95D23A2C3D100EB987E /* TimerViewController.swift */,
 				EC19DA8623BE25040001E3B1 /* ProjectViewController.swift */,
-				EC19DAAF23BE4E0A0001E3B1 /* InsightsViewController.swift */,
+				EC19DAAF23BE4E0A0001E3B1 /* CustomDateViewController.swift */,
 				EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */,
 				EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */,
 			);
@@ -434,7 +434,7 @@
 				EC14D95A23A2C3D100EB987E /* AppDelegate.swift in Sources */,
 				EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */,
 				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
-				EC19DAB023BE4E0A0001E3B1 /* InsightsViewController.swift in Sources */,
+				EC19DAB023BE4E0A0001E3B1 /* CustomDateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
