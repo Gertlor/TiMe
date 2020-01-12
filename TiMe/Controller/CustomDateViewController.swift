@@ -1,5 +1,5 @@
 //
-//  InsightsViewController.swift
+//  CustomDateViewController.swift
 //  TiMe
 //
 //  Created by Gerrit Louis on 02/01/2020.
@@ -18,6 +18,7 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 	@IBOutlet weak var selectDateButton: UIButton!
 	@IBOutlet weak var selectDatePicker: UIDatePicker!
 	@IBOutlet weak var entriesTableView: UITableView!
+	@IBOutlet weak var entriesTitleLabel: UILabel!
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,17 +52,40 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		}
 	}
 	
-
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		loadEntries()
+		selectDatePicker.isHidden = true
     }
+	
+	@IBAction func filterDate(_ sender: UIDatePicker) {
+		let dateFormatter = DateFormatter()
+		dateFormatter.locale = Locale(identifier: "en_GB")
+		dateFormatter.dateFormat = "yyyy-MM-dd"
+		
+		let dateFormatterWithTime = DateFormatter()
+		dateFormatterWithTime.locale = Locale(identifier: "en_GB")
+		dateFormatterWithTime.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		
+		let filterDate = selectDatePicker.date
+		
+		let datestring = dateFormatter.string(from: filterDate)
+		
+		let filterStartDate = dateFormatterWithTime.date(from: "\(datestring) 00:00:00")!
+		let filterEndDate = dateFormatterWithTime.date(from: "\(datestring) 23:59:59")!
+		
+		let predicate = NSPredicate(format: "startTime > %@ AND startTime < %@", argumentArray: [filterStartDate, filterEndDate])
+		
+		loadEntries(predicate: predicate)
+	}
 	
 	func loadEntries(request: NSFetchRequest<Entry> = Entry.fetchRequest(), predicate: NSPredicate? = nil) {
 		
-		let dateFromSevenDaysAgo = Date().addingTimeInterval(-604800) //-604800
-		
-		let predicate = NSPredicate(format: "startTime >= %@", argumentArray: [dateFromSevenDaysAgo])
+		if predicate == nil {
+			let dateFromSevenDaysAgo = Date().addingTimeInterval(-604800)
+			_ = NSPredicate(format: "startTime >= %@", argumentArray: [dateFromSevenDaysAgo])
+		}
 		
 		request.predicate = predicate
 		
@@ -87,6 +111,18 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 	
 	
 	@IBAction func showHideDatePicker(_ sender: UIButton) {
+		self.selectDatePicker.isHidden == true ? hidePicker(hide: false) : hidePicker(hide: true)
+		
+	}
+	@IBAction func clearFilter(_ sender: UIButton) {
+		loadEntries()
+		hidePicker(hide: true)
+	}
+	
+	func hidePicker(hide: Bool) {
+		UIView.animate(withDuration: 0.3) {
+			hide ? (self.selectDatePicker.isHidden = true) : (self.selectDatePicker.isHidden = false)
+		}
 	}
 
 }

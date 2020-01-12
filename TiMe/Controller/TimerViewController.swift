@@ -144,6 +144,7 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	@IBAction func showHideProjectTableView(_ sender: UIButton) {
 		self.projectsTableView.isHidden == true ? hideTableView(hide: false) : hideTableView(hide: true)
+		loadProjects()
 	}
 	
 	func hideTableView(hide: Bool) {
