@@ -20,6 +20,7 @@ class EntryViewController: UITableViewController {
 	
 	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,10 +31,19 @@ class EntryViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "EntryCell")
+//		let cell = EntryTableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "EntryCell")
 		
-		cell.textLabel?.text = entries[indexPath.row].timeDescription
-		cell.detailTextLabel?.text = entries[indexPath.row].timeStamp
+		let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath) as! EntryTableViewCell
+		
+		cell.entryTitleLabel?.text = entries[indexPath.row].timeDescription
+		cell.entryTimeLabel?.text = entries[indexPath.row].timeStamp
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.locale = Locale(identifier: "nl_NL")
+		dateFormatter.dateFormat = "EEE, d MMM yyyy - HH:mm:ss"
+		
+		cell.entryStartDateLabel?.text = dateFormatter.string(from: entries[indexPath.row].startTime ?? Date())
+		cell.entryEndDateLabel?.text = dateFormatter.string(from: entries[indexPath.row].endTime ?? Date())
 		
 		return cell
 	}
@@ -77,5 +87,13 @@ class EntryViewController: UITableViewController {
 		
 		loadEntries()
 	}
+}
 
+class EntryTableViewCell: UITableViewCell {
+	
+	@IBOutlet weak var entryTitleLabel: UILabel!
+	@IBOutlet weak var entryStartDateLabel: UILabel!
+	@IBOutlet weak var entryEndDateLabel: UILabel!
+	@IBOutlet weak var entryTimeLabel: UILabel!
+	
 }
