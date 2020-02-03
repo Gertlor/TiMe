@@ -20,6 +20,7 @@ class ProjectViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
 		loadProjects()
     }

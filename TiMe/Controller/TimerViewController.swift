@@ -34,6 +34,7 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
 		
 		timerLabel.text = "00:00:00"

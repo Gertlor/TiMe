@@ -23,6 +23,7 @@ class EntryViewController: UITableViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
     }
 	
 	//MARK: - TableView Datasource Methods
