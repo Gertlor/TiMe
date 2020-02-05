@@ -47,7 +47,7 @@ enum Theme: Int {
 
     //Customizing the Navigation Bar
     var barStyle: UIBarStyle {
-        switch self {
+        switch self { 
         case .theme1:
             return .default
         case .theme2:
