@@ -200,7 +200,7 @@
                                                     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="r.square.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="redThemeSelected:" destination="qbV-N2-V6q" eventType="touchUpInside" id="7w1-hF-w94"/>
+                                                        <action selector="redSelected:" destination="aS0-dY-gmV" eventType="touchUpInside" id="5Io-Mw-hpt"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5v-Eb-qrh">
@@ -212,7 +212,7 @@
                                                     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="b.square.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="blueThemeSelected:" destination="qbV-N2-V6q" eventType="touchUpInside" id="pYU-eh-As5"/>
+                                                        <action selector="blueSelected:" destination="aS0-dY-gmV" eventType="touchUpInside" id="EZF-hl-Uh9"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lE-KK-5zq">
@@ -224,7 +224,7 @@
                                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="d.square.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="darkThemeSelected:" destination="qbV-N2-V6q" eventType="touchUpInside" id="Uk8-G6-f7M"/>
+                                                        <action selector="darkSelected:" destination="aS0-dY-gmV" eventType="touchUpInside" id="8Ia-2u-uHH"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYa-v7-Rl5">
@@ -236,7 +236,7 @@
                                                     <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="l.square.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="lightThemeSelected:" destination="qbV-N2-V6q" eventType="touchUpInside" id="MdJ-dz-F7l"/>
+                                                        <action selector="lightSelected:" destination="aS0-dY-gmV" eventType="touchUpInside" id="G0C-r6-sgV"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -300,6 +300,9 @@
                         <viewLayoutGuide key="safeArea" id="qOL-D0-jiu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="wrench" catalog="system" id="rSA-ny-Wa4"/>
+                    <connections>
+                        <outlet property="tableView" destination="LlS-U8-Esm" id="FRH-T2-AvE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJU-7a-eFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,6 +544,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="C8Y-jz-6vu"/>
+                    <connections>
+                        <outlet property="tableView" destination="UvV-1r-94K" id="yuA-45-k0D"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWy-vj-0je" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

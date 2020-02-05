@@ -34,68 +34,92 @@ extension UIColor {
 }
 enum Theme: Int {
 
-    case theme1, theme2
+    case redTheme, blueTheme, darkTheme, lightTheme
 
     var mainColor: UIColor {
         switch self {
-        case .theme1:
+        case .lightTheme:
             return UIColor().colorFromHexString("ffffff")
-        case .theme2:
+        case .darkTheme:
             return UIColor().colorFromHexString("000000")
-        }
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
+		}
     }
 
     //Customizing the Navigation Bar
     var barStyle: UIBarStyle {
         switch self { 
-        case .theme1:
+        case .lightTheme:
             return .default
-        case .theme2:
+        case .darkTheme:
             return .black
-        }
+		case .redTheme:
+			return .black
+		case .blueTheme:
+			return .black
+		}
     }
 
     var navigationBackgroundImage: UIImage? {
-        return self == .theme1 ? UIImage(named: "navBackground") : nil
+        return self == .lightTheme ? UIImage(named: "navBackground") : nil
     }
 
     var tabBarBackgroundImage: UIImage? {
-        return self == .theme1 ? UIImage(named: "tabBarBackground") : nil
+        return self == .lightTheme ? UIImage(named: "tabBarBackground") : nil
     }
 
     var backgroundColor: UIColor {
         switch self {
-        case .theme1:
+        case .lightTheme:
             return UIColor().colorFromHexString("ffffff")
-        case .theme2:
+        case .darkTheme:
             return UIColor().colorFromHexString("000000")
-        }
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
+		}
     }
 
     var secondaryColor: UIColor {
         switch self {
-        case .theme1:
+        case .lightTheme:
             return UIColor().colorFromHexString("ffffff")
-        case .theme2:
+        case .darkTheme:
             return UIColor().colorFromHexString("000000")
-        }
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
+		}
     }
     
     var titleTextColor: UIColor {
         switch self {
-        case .theme1:
+        case .lightTheme:
             return UIColor().colorFromHexString("ffffff")
-        case .theme2:
+        case .darkTheme:
             return UIColor().colorFromHexString("000000")
-        }
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
+		}
     }
     var subtitleTextColor: UIColor {
         switch self {
-        case .theme1:
+        case .lightTheme:
             return UIColor().colorFromHexString("ffffff")
-        case .theme2:
+        case .darkTheme:
             return UIColor().colorFromHexString("000000")
-        }
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
+		}
     }
 }
 
@@ -110,7 +134,7 @@ class ThemeManager {
         if let storedTheme = (UserDefaults.standard.value(forKey: SelectedThemeKey) as AnyObject).integerValue {
             return Theme(rawValue: storedTheme)!
         } else {
-            return .theme2
+            return .darkTheme
         }
     }
 

@@ -24,6 +24,7 @@ class EntryViewController: UITableViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
+		tableView.allowsSelection = false
     }
 	
 	//MARK: - TableView Datasource Methods

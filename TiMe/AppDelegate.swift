@@ -23,15 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		switch selectedTheme {
 			
 		case "red":
-			ThemeManager.applyTheme(theme: .theme2)
+			ThemeManager.applyTheme(theme: .redTheme)
 		case "blue":
-			ThemeManager.applyTheme(theme: .theme2)
+			ThemeManager.applyTheme(theme: .blueTheme)
 		case "dark":
-			ThemeManager.applyTheme(theme: .theme1)
+			ThemeManager.applyTheme(theme: .darkTheme)
 		case "light":
-			ThemeManager.applyTheme(theme: .theme1)
+			ThemeManager.applyTheme(theme: .lightTheme)
 		default:
-			ThemeManager.applyTheme(theme: .theme2)
+			ThemeManager.applyTheme(theme: .darkTheme)
 		}
 		
 		return true
