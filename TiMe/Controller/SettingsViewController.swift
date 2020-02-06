@@ -83,7 +83,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 		self.present(alert, animated: true, completion: nil)
 		
 		tableView.reloadData()
-		self.viewDidLoad()
 	}
 	
 }
