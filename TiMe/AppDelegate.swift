@@ -16,23 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		let defaults = UserDefaults.standard
-		
-		let selectedTheme = defaults.string(forKey: "Theme")
-		
-		switch selectedTheme {
-			
-		case "red":
-			ThemeManager.applyTheme(theme: .redTheme)
-		case "blue":
-			ThemeManager.applyTheme(theme: .blueTheme)
-		case "dark":
-			ThemeManager.applyTheme(theme: .darkTheme)
-		case "light":
-			ThemeManager.applyTheme(theme: .lightTheme)
-		default:
-			ThemeManager.applyTheme(theme: .darkTheme)
-		}
+//		let defaults = UserDefaults.standard
+//
+//		let selectedTheme = defaults.string(forKey: "Theme")
+//
+//		switch selectedTheme {
+//			
+//		case "red":
+//			ThemeManager.applyTheme(theme: .redTheme)
+//		case "blue":
+//			ThemeManager.applyTheme(theme: .blueTheme)
+//		case "dark":
+//			ThemeManager.applyTheme(theme: .darkTheme)
+//		case "light":
+//			ThemeManager.applyTheme(theme: .lightTheme)
+//		default:
+//			ThemeManager.applyTheme(theme: .darkTheme)
+//		}
 		
 		return true
 	}

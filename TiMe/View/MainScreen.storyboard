@@ -178,7 +178,7 @@
             <objects>
                 <viewController id="aS0-dY-gmV" customClass="SettingsViewController" customModule="TiMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VST-Y4-5DO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ6-wz-Pjv">
@@ -196,7 +196,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LlS-U8-Esm">
-                                <rect key="frame" x="0.0" y="88" width="375" height="621"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsColorCell" rowHeight="85" id="qbV-N2-V6q" customClass="CustomColorSettingsCell" customModule="TiMe" customModuleProvider="target">
@@ -604,7 +604,6 @@
                         <segue destination="aOS-lE-sti" kind="relationship" relationship="viewControllers" id="7bG-QY-t6w"/>
                         <segue destination="w9F-7X-rEP" kind="relationship" relationship="viewControllers" id="udc-Iw-1F1"/>
                         <segue destination="yMg-XM-qJv" kind="relationship" relationship="viewControllers" id="Kt9-qt-5oi"/>
-                        <segue destination="aS0-dY-gmV" kind="relationship" relationship="viewControllers" id="nRb-kF-JTm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaT-ei-8MK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
