@@ -69,6 +69,9 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		dateFormatterWithTime.locale = Locale(identifier: "en_GB")
 		dateFormatterWithTime.dateFormat = "yyyy-MM-dd HH:mm:ss"
 		
+		let dateForButtonFormatter = DateFormatter()
+		dateForButtonFormatter.dateFormat = "d MMMM yyyy"
+		
 		let filterDate = selectDatePicker.date
 		
 		let datestring = dateFormatter.string(from: filterDate)
@@ -77,6 +80,8 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		let filterEndDate = dateFormatterWithTime.date(from: "\(datestring) 23:59:59")!
 		
 		let predicate = NSPredicate(format: "startTime > %@ AND startTime < %@", argumentArray: [filterStartDate, filterEndDate])
+		
+		selectDateButton.setTitle(dateForButtonFormatter.string(from: filterDate), for: .normal)
 		
 		loadEntries(predicate: predicate)
 	}
@@ -118,6 +123,7 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 	@IBAction func clearFilter(_ sender: UIButton) {
 		loadEntries()
 		hidePicker(hide: true)
+		selectDateButton.setTitle("Select a date", for: .normal)
 	}
 	
 	func hidePicker(hide: Bool) {
