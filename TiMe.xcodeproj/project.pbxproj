@@ -29,6 +29,8 @@
 		EC19DAB223BE4E1A0001E3B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */; };
 		EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */; };
 		ECB8097923E83E330086ECB9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8097823E83E330086ECB9 /* ThemeManager.swift */; };
+		ECB8098123EC42DF0086ECB9 /* ProjectInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8098023EC42DF0086ECB9 /* ProjectInterfaceController.swift */; };
+		ECB8098523EC52530086ECB9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,7 @@
 		EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ECB8097823E83E330086ECB9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		ECB8098023EC42DF0086ECB9 /* ProjectInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInterfaceController.swift; sourceTree = "<group>"; };
 		ECBD3C39E719F77B4B1A85C3 /* Pods_TiMe_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,8 +211,9 @@
 		EC14D97D23A2C3D700EB987E /* TiMe WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EC14D97E23A2C3D700EB987E /* InterfaceController.swift */,
 				EC14D98023A2C3D700EB987E /* ExtensionDelegate.swift */,
+				EC14D97E23A2C3D700EB987E /* InterfaceController.swift */,
+				ECB8098023EC42DF0086ECB9 /* ProjectInterfaceController.swift */,
 				EC14D98223A2C3D700EB987E /* NotificationController.swift */,
 				EC14D98423A2C3D700EB987E /* ComplicationController.swift */,
 				EC14D98623A2C3D800EB987E /* Assets.xcassets */,
@@ -447,7 +451,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC14D98323A2C3D700EB987E /* NotificationController.swift in Sources */,
+				ECB8098123EC42DF0086ECB9 /* ProjectInterfaceController.swift in Sources */,
 				EC14D98523A2C3D700EB987E /* ComplicationController.swift in Sources */,
+				ECB8098523EC52530086ECB9 /* DataModel.xcdatamodeld in Sources */,
 				EC14D98123A2C3D700EB987E /* ExtensionDelegate.swift in Sources */,
 				EC14D97F23A2C3D700EB987E /* InterfaceController.swift in Sources */,
 			);
@@ -615,7 +621,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "TiMe WatchKit Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,7 +643,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerlobes.TiMe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "TiMe WatchKit Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
