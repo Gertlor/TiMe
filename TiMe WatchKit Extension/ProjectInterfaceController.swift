@@ -9,21 +9,28 @@
 import Foundation
 import WatchKit
 import CoreData
+import WatchConnectivity
 
-class ProjectInterfaceController: WKInterfaceController {
+class ProjectInterfaceController: WKInterfaceController, WCSessionDelegate {
 	
+	//MARK: - Outlets
 	@IBOutlet weak var projectTable: WKInterfaceTable!
+	
+	//MARK: - Variables
 	
 	var projectArray: [Project] = []
 	var selectedProject: Project?
 	
+	//MARK: - Constants
+	
 	let context = (WKExtension.shared().delegate as! ExtensionDelegate).persistentContainer.viewContext
+	
+	//MARK: - Overrides
 	
 	override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-		loadProjects()
 		
     }
     
@@ -35,34 +42,16 @@ class ProjectInterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-	
-	
-	func loadProjects(request: NSFetchRequest<Project> = Project.fetchRequest()) {
-		do {
-			projectArray = try context.fetch(request)
-		} catch {
-			print("Error fetching data from context \(error)")
-		}
-		
-		loadTableRows()
 	}
 	
-	func loadTableRows() {
-		self.projectTable.setNumberOfRows(projectArray.count, withRowType: "MainRowType")
-		let rowCount = self.projectTable.numberOfRows
-		
-		for i in 0..<rowCount {
-			// Set the values for the row controller
-			let row = self.projectTable.rowController(at: i) as! ProjectRowController
-			
-			let project = projectArray[i]
-			
-			row.projectNameLabel.setText(project.name)
-		}
-	}
+	//MARK: - WatchConnectivity
 	
+	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+		
+	}
 }
+
+//MARK: - CustomTableRow - ProjectRowController
 
 class ProjectRowController: NSObject {
 	

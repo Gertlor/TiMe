@@ -8,39 +8,36 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
+	//MARK: - Outlets
 	@IBOutlet weak var timerLabel: WKInterfaceLabel!
 	@IBOutlet weak var entryName: WKInterfaceTextField!
 	@IBOutlet weak var selectProjectButton: WKInterfaceButton!
 	@IBOutlet weak var startStopButton: WKInterfaceButton!
 	
-	let context = (WKExtension.shared().delegate as! ExtensionDelegate).persistentContainer.viewContext
+	//MARK: - Variables
+	 var wcSession : WCSession!
 	
-	var timer = Timer()
-	var hours: Int = 0
-	var minutes: Int = 0
-	var seconds: Int = 0
-	var timerString: String = ""
-	var startDate: Date = Date()
-	var endDate: Date = Date()
-	
-	var startTimer: Bool = true
-	var entryNameString = ""
+	//MARK: - Overrides
 	
 	override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-		timerLabel.setText("00:00:00")
 		
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+		
+		wcSession = WCSession.default
+			   wcSession.delegate = self
+			   wcSession.activate()
     }
     
     override func didDeactivate() {
@@ -48,76 +45,46 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 	
-	@IBAction func startStopTimer() {
-		print("clicked")
-		
-		if startTimer == true {
-			timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-			startTimer = false
-			startStopButton.setTitle("Stop")
-			startDate = Date()
-		} else {
-			timer.invalidate()
-			startTimer = true
-			startStopButton.setTitle("Start")
-			endDate = Date()
-			saveTimeEntry()
+	//MARK: - WatchConnectivity
+	func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+		if let entryNameObject = message["entryNameFromiPhone"] {
+			entryName.setText(entryNameObject as? String)
 		}
+		
+		if let timerLabelObject = message["timerFromiPhone"]  {
+			timerLabel.setText(timerLabelObject as? String)
+		}
+		
+		if let selectedProjectNameObject = message["selectedProjectFromiPhone"]  {
+			selectProjectButton.setTitle(selectedProjectNameObject as? String)
+		}
+		
+		if let timerActiveObject = message["isTimerActiveFromiPhone"]  {
+			let timerActive = timerActiveObject as! Bool
+			
+			if timerActive {
+				startStopButton.setTitle("Stop")
+			} else {
+				startStopButton.setTitle("Start")
+			}
+		
+		}
+    }
+	
+	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+		
+	}
+	
+	//MARK: - Actions
+	
+	@IBAction func startStopTimer() {
+		
 		
 	}
 	
 	@IBAction func receiveEntryName(_ value: NSString?) {
-		entryNameString = value! as String
-	}
-	
-	@objc func updateTimer() {
-		seconds += 1
-		if seconds == 60 {
-			minutes += 1
-			seconds = 0
-		}
-		
-		if minutes == 60 {
-			hours += 1
-			minutes = 0
-		}
-		
-		let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
-		let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
-		let hoursString = hours > 9 ? "\(hours)" : "0\(hours)"
-		
-		timerString = "\(hoursString):\(minutesString):\(secondsString)"
-		timerLabel.setText(timerString)
-	}
-	
-	func saveTimeEntry() {
-		
-		let newEntry = Entry(context: context)
-		newEntry.timeDescription = entryNameString
-		newEntry.timeStamp = timerString
-//		newEntry.parentProject = selectedProject
-		newEntry.startTime = startDate
-		newEntry.endTime = endDate
-		
-		saveContext()
-		
-		hours = 0
-		minutes = 0
-		seconds = 0
-		timerString = "00:00:00"
-		timerLabel.setText(timerString)
-		entryName.setText("Entry Name")
-		selectProjectButton.setTitle("Select a project")
-	}
-	
-	func saveContext() {
-		do {
-			try context.save()
-		} catch {
-			print("Error saving context \(error)")
-		}
 		
 	}
 	
-
 }

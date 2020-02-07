@@ -13,7 +13,7 @@
                     <items>
                         <table alignment="left" id="NMt-BJ-mFI">
                             <items>
-                                <tableRow id="5KU-K5-IPK" customClass="ProjectRowController" customModule="TiMe_WatchKit_Extension">
+                                <tableRow identifier="projectrowcontroller" id="5KU-K5-IPK" customClass="ProjectRowController" customModule="TiMe_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="GJz-Dk-wPj">
                                         <items>
                                             <label alignment="center" verticalAlignment="center" text="ProjectName" id="0WP-6G-BYX"/>

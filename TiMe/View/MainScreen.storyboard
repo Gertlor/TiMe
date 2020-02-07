@@ -352,6 +352,9 @@
                                 <rect key="frame" x="16" y="413" width="343" height="53"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="sendEntryNameToAW:" destination="aOS-lE-sti" eventType="editingDidEnd" id="Jvj-qL-vRQ"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbt-7t-ozT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

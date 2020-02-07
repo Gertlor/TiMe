@@ -8,23 +8,9 @@
 
 import UIKit
 import CoreData
+import WatchConnectivity
 
 class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-	var timer = Timer()
-	var hours: Int = 0
-	var minutes: Int = 0
-	var seconds: Int = 0
-	var timerString: String = ""
-	var startDate: Date = Date()
-	var endDate: Date = Date()
-	
-	var startTimer: Bool = true
-	
-	var projectArray: [Project] = []
-	var selectedProject: Project?
-	
-	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
 	@IBOutlet weak var projectsTableView: UITableView!
 	@IBOutlet weak var showHideProjectTVButton: UIButton!
@@ -32,14 +18,35 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	@IBOutlet weak var timerLabel: UILabel!
 	@IBOutlet weak var startStopButton: UIButton!
 	
+	var timer = Timer()
+	var hours: Int = 0
+	var minutes: Int = 0
+	var seconds: Int = 0
+	var timerString: String = ""
+	var startDate: Date = Date()
+	var endDate: Date = Date()
+	var startTimer: Bool = true
+	
+	var projectArray: [Project] = []
+	var selectedProject: Project?
+	
+	var wcSession : WCSession! = nil
+	
+	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
+		
+//		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
 		
 		timerLabel.text = "00:00:00"
 		projectsTableView.isHidden = true
 		loadProjects()
+		
+		wcSession = WCSession.default
+        wcSession.delegate = self
+        wcSession.activate()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,8 +67,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		selectedProject = projectArray[indexPath.row]
 		
 		showHideProjectTVButton.setTitle(selectedProject!.name, for: .normal)
+		sendMessageToAW(key: "selectedProjectFromiPhone", object: selectedProject?.name ?? "No Name")
 		hideTableView(hide: true)
-		
 	}
 
 	
@@ -72,12 +79,14 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 			startStopButton.setImage(UIImage(named: "stop.png"), for: UIControl.State.normal)
 			startDate = Date()
 			self.view.endEditing(true)
+			sendMessageToAW(key: "isTimerActiveFromiPhone" , object: true)
 		} else {
 			timer.invalidate()
 			startTimer = true
 			startStopButton.setImage(UIImage(named:"start.png"), for: UIControl.State.normal)
 			endDate = Date()
 			saveTimeEntry()
+			sendMessageToAW(key: "isTimerActiveFromiPhone" , object: false)
 		}
 	}
 	
@@ -99,6 +108,9 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		
 		timerString = "\(hoursString):\(minutesString):\(secondsString)"
 		timerLabel.text = timerString
+		
+		sendMessageToAW(key: "timerFromiPhone" , object: timerString)
+		
 	}
 	
 	func saveTimeEntry() {
@@ -120,6 +132,10 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		timeEntryDescriptionLabel.text = ""
 		showHideProjectTVButton.setTitle("Select a project", for: .normal)
 		
+		sendMessageToAW(key: "timerFromiPhone", object: timerString)
+		sendMessageToAW(key: "entryNameFromiPhone", object: "Entry Name")
+		sendMessageToAW(key: "selectedProjectFromiPhone", object: "Select a Project")
+		
 	}
 	
 	func saveContext() {
@@ -131,6 +147,13 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		
 		loadProjects()
 	}
+	
+	@IBAction func sendEntryNameToAW(_ sender: UITextField) {
+		
+		sendMessageToAW(key: "entryNameFromiPhone", object: timeEntryDescriptionLabel.text!)
+		
+	}
+	
 	
 	//MARK: - Project methods
 	
@@ -153,6 +176,35 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 			hide ? (self.projectsTableView.isHidden = true) : (self.projectsTableView.isHidden = false)
 		}
 	}
+	
+}
+
+//MARK: - WatchConnectivity
+
+extension TimerViewController: WCSessionDelegate {
+	
+	
+	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+		
+	}
+	
+	func sessionDidBecomeInactive(_ session: WCSession) {
+		
+	}
+	
+	func sessionDidDeactivate(_ session: WCSession) {
+		
+	}
+	
+	func sendMessageToAW(key: String, object: Any) {
+        let message = [key:object]
+		wcSession.sendMessage(message as [String : Any], replyHandler: nil) { (error) in
+            
+            print(error.localizedDescription)
+            
+        }
+	}
+	
 	
 }
 
