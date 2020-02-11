@@ -18,6 +18,7 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var timerString: String = ""
 	var startDate: Date = Date()
 	var endDate: Date = Date()
+	var duration: String = "00:00:00"
 	
 	var startTimer: Bool = true
 	
@@ -103,12 +104,15 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func saveTimeEntry() {
 		
+		calculateDuration()
+		
 		let newEntry = Entry(context: context)
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
 		newEntry.timeStamp = timerString
 		newEntry.parentProject = selectedProject
 		newEntry.startTime = startDate
 		newEntry.endTime = endDate
+		newEntry.id = UUID()
 		
 		saveContext()
 		
@@ -120,6 +124,17 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		timeEntryDescriptionLabel.text = ""
 		showHideProjectTVButton.setTitle("Select a project", for: .normal)
 		
+	}
+	
+	func calculateDuration() {
+		let calendar = Calendar.current
+
+		let components = calendar.dateComponents([.hour, .minute, .second], from: startDate, to: endDate)
+		let date = calendar.date(from: components)!
+		let formatter = DateFormatter()
+		formatter.dateFormat = "HH:mm:ss"
+		let dateString = formatter.string(from: date)
+		timerString = dateString
 	}
 	
 	func saveContext() {

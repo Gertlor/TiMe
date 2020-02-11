@@ -52,7 +52,6 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		}
 	}
 	
-	
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
