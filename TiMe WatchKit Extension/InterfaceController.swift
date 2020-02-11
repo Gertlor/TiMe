@@ -36,8 +36,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.willActivate()
 		
 		wcSession = WCSession.default
-			   wcSession.delegate = self
-			   wcSession.activate()
+		wcSession.delegate = self
+		wcSession.activate()
     }
     
     override func didDeactivate() {
@@ -72,8 +72,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 		}
     }
 	
+	func sendMessageToiPhone(key: String, object: Any) {
+        let message = [key:object]
+		wcSession.sendMessage(message as [String : Any], replyHandler: nil) { (error) in
+            print("Error: \(error.localizedDescription)")
+        }
+	}
+	
 	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-		
+	
 	}
 	
 	//MARK: - Actions
@@ -84,7 +91,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 	}
 	
 	@IBAction func receiveEntryName(_ value: NSString?) {
-		
+//		sendMessageToiPhone(key: "entryNameFromAW", object: value!)
 	}
 	
 }

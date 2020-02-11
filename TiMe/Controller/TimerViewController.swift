@@ -30,7 +30,7 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var projectArray: [Project] = []
 	var selectedProject: Project?
 	
-	var wcSession : WCSession! = nil
+	var wcSession : WCSession!
 	
 	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	
@@ -45,8 +45,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		loadProjects()
 		
 		wcSession = WCSession.default
-        wcSession.delegate = self
-        wcSession.activate()
+		wcSession?.delegate = self
+		wcSession?.activate()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -203,9 +203,14 @@ extension TimerViewController: WCSessionDelegate {
             print(error.localizedDescription)
             
         }
+		
 	}
 	
-	
+	func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+		if let entryNameObject = message["entryNameFromAW"] {
+			timeEntryDescriptionLabel.text = entryNameObject as? String
+		}
+	}
 }
 
 extension UIViewController {
