@@ -31,6 +31,7 @@
 		ECB8097923E83E330086ECB9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8097823E83E330086ECB9 /* ThemeManager.swift */; };
 		ECB8098123EC42DF0086ECB9 /* ProjectInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8098023EC42DF0086ECB9 /* ProjectInterfaceController.swift */; };
 		ECB8098523EC52530086ECB9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC19DA8823BE288D0001E3B1 /* DataModel.xcdatamodeld */; };
+		ECBBDE8D23F3340D00AF02A8 /* EditEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBDE8C23F3340D00AF02A8 /* EditEntryViewController.swift */; };
 		ECDB373B23BCD94F00AD86AF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		ECB8097823E83E330086ECB9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		ECB8098023EC42DF0086ECB9 /* ProjectInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInterfaceController.swift; sourceTree = "<group>"; };
+		ECBBDE8C23F3340D00AF02A8 /* EditEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryViewController.swift; sourceTree = "<group>"; };
 		ECBD3C39E719F77B4B1A85C3 /* Pods_TiMe_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiMe_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB373A23BCD94F00AD86AF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +241,7 @@
 				EC19DAAF23BE4E0A0001E3B1 /* CustomDateViewController.swift */,
 				EC19DAB123BE4E1A0001E3B1 /* SettingsViewController.swift */,
 				EC8643DA23C65F7B00BADAF2 /* EntryViewController.swift */,
+				ECBBDE8C23F3340D00AF02A8 /* EditEntryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				EC8643DB23C65F7B00BADAF2 /* EntryViewController.swift in Sources */,
 				EC14D95C23A2C3D100EB987E /* SceneDelegate.swift in Sources */,
 				EC19DAB023BE4E0A0001E3B1 /* CustomDateViewController.swift in Sources */,
+				ECBBDE8D23F3340D00AF02A8 /* EditEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
