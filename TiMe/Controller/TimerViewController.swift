@@ -35,8 +35,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
+		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		
 		timerLabel.text = "00:00:00"
 		projectsTableView.isHidden = true
@@ -53,6 +53,10 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		let project = projectArray[indexPath.row]
 		
 		cell.textLabel?.text = project.name
+		cell.textLabel?.textColor = ThemeManager.currentTheme().titleTextColor
+		let backgroundView = UIView()
+		backgroundView.backgroundColor = ThemeManager.currentTheme().mainColor
+		cell.selectedBackgroundView = backgroundView
 		
 		return cell
 	}
@@ -64,7 +68,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		hideTableView(hide: true)
 		
 	}
-
 	
 	@IBAction func startStop(_ sender: UIButton) {
 		if startTimer == true {

@@ -18,7 +18,7 @@ class ProjectViewController: UITableViewController {
 	
 	var projectArray: [Project] = []
 
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
@@ -37,6 +37,10 @@ class ProjectViewController: UITableViewController {
 		let project = projectArray[indexPath.row]
 		
 		cell.textLabel?.text = project.name ?? "No projects added yet"
+		cell.textLabel?.textColor = ThemeManager.currentTheme().titleTextColor
+		let backgroundView = UIView()
+		backgroundView.backgroundColor = ThemeManager.currentTheme().mainColor
+		cell.selectedBackgroundView = backgroundView
 		
 		return cell
 	}
@@ -119,6 +123,7 @@ class ProjectViewController: UITableViewController {
 extension ProjectViewController: UISearchBarDelegate {
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		
 		if searchBar.text?.count == 0 {
 			loadProjects()
 		} else {

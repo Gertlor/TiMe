@@ -40,6 +40,8 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		
 		cell.dateLabel?.text = dateFormatter.string(from: entries[indexPath.row].startTime ?? Date())
 		
+		cell.selectionStyle = .none
+		
 		return cell
 		
 	}

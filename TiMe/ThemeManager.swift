@@ -43,23 +43,35 @@ enum Theme: Int {
         case .darkTheme:
             return UIColor().colorFromHexString("000000")
 		case .redTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("CB4335")
 		case .blueTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("2471A3")
 		}
     }
 
-    //Customizing the Navigation Bar
     var barStyle: UIBarStyle {
-        switch self { 
+        switch self {
         case .lightTheme:
-            return .default
+			return .default
         case .darkTheme:
-            return .black
+			return .black
 		case .redTheme:
 			return .black
 		case .blueTheme:
 			return .black
+		}
+    }
+	
+	var barTitleColor: UIColor {
+        switch self {
+        case .lightTheme:
+            return UIColor().colorFromHexString("000000")
+        case .darkTheme:
+            return UIColor().colorFromHexString("ffffff")
+		case .redTheme:
+			return UIColor().colorFromHexString("000000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("000000")
 		}
     }
 
@@ -78,9 +90,9 @@ enum Theme: Int {
         case .darkTheme:
             return UIColor().colorFromHexString("000000")
 		case .redTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("f1948a")
 		case .blueTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("5dade2")
 		}
     }
 
@@ -91,36 +103,76 @@ enum Theme: Int {
         case .darkTheme:
             return UIColor().colorFromHexString("000000")
 		case .redTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("CB4335")
 		case .blueTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("2471A3")
 		}
     }
     
     var titleTextColor: UIColor {
         switch self {
         case .lightTheme:
-            return UIColor().colorFromHexString("ffffff")
-        case .darkTheme:
             return UIColor().colorFromHexString("000000")
+        case .darkTheme:
+            return UIColor().colorFromHexString("ffffff")
 		case .redTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("CC0000")
 		case .blueTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("000099")
 		}
     }
+	
     var subtitleTextColor: UIColor {
         switch self {
         case .lightTheme:
-            return UIColor().colorFromHexString("ffffff")
-        case .darkTheme:
             return UIColor().colorFromHexString("000000")
+        case .darkTheme:
+            return UIColor().colorFromHexString("ffffff")
 		case .redTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("DF0606")
 		case .blueTheme:
-			return UIColor().colorFromHexString("000000")
+			return UIColor().colorFromHexString("0080FF")
 		}
     }
+	
+	var tabBarItemColor: UIColor {
+        switch self {
+        case .lightTheme:
+            return UIColor().colorFromHexString("000000")
+        case .darkTheme:
+            return UIColor().colorFromHexString("ffffff")
+		case .redTheme:
+			return UIColor().colorFromHexString("FF9999")
+		case .blueTheme:
+			return UIColor().colorFromHexString("99CCFF")
+		}
+	}
+		
+	var selectedTabBarItemColor: UIColor {
+		switch self {
+		case .lightTheme:
+			return UIColor().colorFromHexString("808080")
+		case .darkTheme:
+			return UIColor().colorFromHexString("808080")
+		case .redTheme:
+			return UIColor().colorFromHexString("330000")
+		case .blueTheme:
+			return UIColor().colorFromHexString("99CCFF")
+			}
+	}
+	
+	var cellBackgroundColor: UIColor {
+		switch self {
+		case .lightTheme:
+			return UIColor().colorFromHexString("ffffff")
+		case .darkTheme:
+			return UIColor().colorFromHexString("000000")
+		case .redTheme:
+			return UIColor().colorFromHexString("FF9999")
+		case .blueTheme:
+			return UIColor().colorFromHexString("99CCFF")
+			}
+	}
 }
 
 // Enum declaration
@@ -183,5 +235,25 @@ class ThemeManager {
 
         UISwitch.appearance().onTintColor = theme.mainColor.withAlphaComponent(0.3)
         UISwitch.appearance().thumbTintColor = theme.mainColor
+		
+		UINavigationBar.appearance().barTintColor = theme.mainColor
+		UINavigationBar.appearance().tintColor = theme.barTitleColor
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: theme.barTitleColor]
+		
+		UILabel.appearance().textColor = theme.titleTextColor
+		UITextField.appearance().textColor = theme.subtitleTextColor
+		
+		UIButton.appearance().tintColor = theme.subtitleTextColor
+		
+		UITabBar.appearance().tintColor = theme.selectedTabBarItemColor
+		UITabBar.appearance().barTintColor = theme.mainColor
+		UITabBar.appearance().unselectedItemTintColor = theme.tabBarItemColor
+		
+		UITableView.appearance().backgroundColor = theme.mainColor
+		UITableView.appearance().tintColor = theme.subtitleTextColor
+		
+		UITableViewCell.appearance().backgroundColor = theme.cellBackgroundColor
+		
+		UISearchBar.appearance().barTintColor = theme.backgroundColor
     }
 }

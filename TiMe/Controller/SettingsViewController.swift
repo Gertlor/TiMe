@@ -39,6 +39,11 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 			
 		}
 		
+		cell.redThemeButton.tintColor = .red
+		cell.blueThemeButton.tintColor = .blue
+		cell.darkThemeButton.tintColor = .darkGray
+		cell.lightThemeButton.tintColor = .lightGray
+		
 		return cell
 	}
 
