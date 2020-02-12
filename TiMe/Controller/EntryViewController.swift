@@ -24,6 +24,7 @@ class EntryViewController: UITableViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
+		tableView.allowsSelection = false
     }
 	
 	//MARK: - TableView Datasource Methods
@@ -53,15 +54,6 @@ class EntryViewController: UITableViewController {
 			context.delete(entries[indexPath.row])
 			entries.remove(at: indexPath.row)
 			saveContext()
-		}
-		
-	}
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		let destinationVC = segue.destination as! EditEntryViewController
-		
-		if let indexPath = tableView.indexPathForSelectedRow {
-			destinationVC.selectedEntry = entries[indexPath.row]
 		}
 	}
 	

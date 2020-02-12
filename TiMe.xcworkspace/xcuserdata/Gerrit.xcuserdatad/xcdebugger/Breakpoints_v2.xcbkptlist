@@ -15,7 +15,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
-            endingLineNumber = "185">
+            endingLineNumber = "185"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "08706E39-48C3-4634-9620-8FF56DF2B6D9 - d7178cbf2674a931"
@@ -61,7 +63,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
-            endingLineNumber = "185">
+            endingLineNumber = "185"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -75,7 +79,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
-            endingLineNumber = "185">
+            endingLineNumber = "185"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,7 +96,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
             endingLineNumber = "132"
-            landmarkName = "calculateDuration()"
+            landmarkName = "saveTimeEntry()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

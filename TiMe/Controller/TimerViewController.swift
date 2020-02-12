@@ -11,7 +11,13 @@ import CoreData
 import WatchConnectivity
 
 class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+	
+	@IBOutlet weak var projectsTableView: UITableView!
+	@IBOutlet weak var showHideProjectTVButton: UIButton!
+	@IBOutlet weak var timeEntryDescriptionLabel: UITextField!
+	@IBOutlet weak var timerLabel: UILabel!
+	@IBOutlet weak var startStopButton: UIButton!
+	
 	var timer = Timer()
 	var hours: Int = 0
 	var minutes: Int = 0
@@ -19,8 +25,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var timerString: String = ""
 	var startDate: Date = Date()
 	var endDate: Date = Date()
-	var duration: String = "00:00:00"
-	
 	var startTimer: Bool = true
 	
 	var projectArray: [Project] = []
@@ -32,7 +36,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
+		
+//		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
 		
 		timerLabel.text = "00:00:00"
@@ -110,7 +115,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func saveTimeEntry() {
 		
-		calculateDuration()
 		
 		let newEntry = Entry(context: context)
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
@@ -118,7 +122,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		newEntry.parentProject = selectedProject
 		newEntry.startTime = startDate
 		newEntry.endTime = endDate
-		newEntry.id = UUID()
 		
 		saveContext()
 		
@@ -134,17 +137,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		sendMessageToAW(key: "entryNameFromiPhone", object: "Entry Name")
 		sendMessageToAW(key: "selectedProjectFromiPhone", object: "Select a Project")
 		
-	}
-	
-	func calculateDuration() {
-		let calendar = Calendar.current
-
-		let components = calendar.dateComponents([.hour, .minute, .second], from: startDate, to: endDate)
-		let date = calendar.date(from: components)!
-		let formatter = DateFormatter()
-		formatter.dateFormat = "HH:mm:ss"
-		let dateString = formatter.string(from: date)
-		timerString = dateString
 	}
 	
 	func saveContext() {
