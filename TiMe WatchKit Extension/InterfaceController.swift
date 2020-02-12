@@ -92,6 +92,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 	
 	@IBAction func receiveEntryName(_ value: NSString?) {
 //		sendMessageToiPhone(key: "entryNameFromAW", object: value!)
+		
 	}
 	
 }
