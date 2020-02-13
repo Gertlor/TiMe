@@ -25,6 +25,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	var timerString: String = ""
 	var startDate: Date = Date()
 	var endDate: Date = Date()
+	var duration: String = "00:00:00"
+	
 	var startTimer: Bool = true
 	
 	var projectArray: [Project] = []
@@ -36,9 +38,8 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-//		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		self.setupToHideKeyboardOnTapOnView()
+		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
 		
 		timerLabel.text = "00:00:00"
 		projectsTableView.isHidden = true
@@ -59,6 +60,10 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		let project = projectArray[indexPath.row]
 		
 		cell.textLabel?.text = project.name
+		cell.textLabel?.textColor = ThemeManager.currentTheme().titleTextColor
+		let backgroundView = UIView()
+		backgroundView.backgroundColor = ThemeManager.currentTheme().mainColor
+		cell.selectedBackgroundView = backgroundView
 		
 		return cell
 	}
@@ -70,7 +75,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		sendMessageToAW(key: "selectedProjectFromiPhone", object: selectedProject?.name ?? "No Name")
 		hideTableView(hide: true)
 	}
-
 	
 	@IBAction func startStop(_ sender: UIButton) {
 		if startTimer == true {
@@ -115,12 +119,15 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func saveTimeEntry() {
 		
+		calculateDuration()
+		
 		let newEntry = Entry(context: context)
 		newEntry.timeDescription = timeEntryDescriptionLabel.text
 		newEntry.timeStamp = timerString
 		newEntry.parentProject = selectedProject
 		newEntry.startTime = startDate
 		newEntry.endTime = endDate
+		newEntry.id = UUID()
 		
 		saveContext()
 		
@@ -136,6 +143,17 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		sendMessageToAW(key: "entryNameFromiPhone", object: "Entry Name")
 		sendMessageToAW(key: "selectedProjectFromiPhone", object: "Select a Project")
 		
+	}
+	
+	func calculateDuration() {
+		let calendar = Calendar.current
+
+		let components = calendar.dateComponents([.hour, .minute, .second], from: startDate, to: endDate)
+		let date = calendar.date(from: components)!
+		let formatter = DateFormatter()
+		formatter.dateFormat = "HH:mm:ss"
+		let dateString = formatter.string(from: date)
+		timerString = dateString
 	}
 	
 	func saveContext() {
