@@ -26,6 +26,10 @@ class EntryViewController: UITableViewController {
 		self.view.backgroundColor = ThemeManager.currentTheme().backgroundColor
     }
 	
+	override func viewWillAppear(_ animated: Bool) {
+		loadEntries()
+	}
+	
 	//MARK: - TableView Datasource Methods
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return entries.count

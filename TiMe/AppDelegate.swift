@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			case "light":
 				ThemeManager.applyTheme(theme: .lightTheme)
 			default:
-			ThemeManager.applyTheme(theme: .darkTheme)
+				ThemeManager.applyTheme(theme: .darkTheme)
 		}
 		
 		return true

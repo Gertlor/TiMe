@@ -106,7 +106,7 @@ class EditEntryViewController: UIViewController, UITableViewDelegate, UITableVie
 		} catch {
 			print("Error saving context \(error)")
 		}
-		_ = navigationController?.popToRootViewController(animated: true)
+		_ = navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func fromDatePickerChanged(_ sender: Any) {

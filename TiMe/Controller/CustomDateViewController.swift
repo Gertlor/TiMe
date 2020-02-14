@@ -61,6 +61,10 @@ class CustomDateViewController: UIViewController, UITableViewDelegate, UITableVi
 		selectDatePicker.isHidden = true
     }
 	
+	override func viewWillAppear(_ animated: Bool) {
+		loadEntries()
+	}
+	
 	@IBAction func filterDate(_ sender: UIDatePicker) {
 		let dateFormatter = DateFormatter()
 		dateFormatter.locale = Locale(identifier: "en_GB")
